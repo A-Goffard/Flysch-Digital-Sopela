@@ -15,6 +15,14 @@
     --darkgreen: #2c770f;
 }
 
+.logo {
+    max-width: 15rem;
+}
+
+.hojitas {
+    max-width: 10rem;
+}
+
 body {
     display: flex;
     flex-direction: column;
