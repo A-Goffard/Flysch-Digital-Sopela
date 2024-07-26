@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -6,12 +7,14 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent implements OnInit {
 
   title = 'Flysch-Digital';
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -33,6 +36,11 @@ export class AppComponent implements OnInit {
         logo.classList.remove('animate__fadeIn');
         logo.classList.add('animate__fadeOut');
       }
-    }, 7000); // 5000ms = 5 segundos
+
+      // Esperar a que las animaciones terminen antes de redirigir
+      setTimeout(() => {
+        this.router.navigate(['/home']); // Ajusta la ruta según sea necesario
+      }, 1000); // Ajusta el tiempo según la duración de la animación fadeOut
+    }, 7000); // 7000ms = 7 segundos
   }
 }

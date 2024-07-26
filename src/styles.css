@@ -91,5 +91,5 @@ p {
 }
 
 .animate__animated.animate__fadeOut {
-    --animation-duration: 5s;
+    --animate-duration: 4s;
 }
