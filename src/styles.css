@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --darkgrey: #333333;
+    --ligthgreen: #26B12C;
+    --green: #498536;
+    --darkgreen: #2c770f;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 1.5rem;
+    font-size: 3rem;
+    color: var(--darkgreen);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+h2 {
+    margin: 1.5rem;
+    font-size: 2.3rem;
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+h3 {
+    margin: 1rem;
+    font-size: 1.7rem;
+}
+
+p {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.btnA {
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 0.7rem;
+    background-color: var(--darkgreen);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.index {
+    text-align: center;
+}
+
+.input-repuestas {
+    margin: 1rem;
+}
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 4s;
+  }
