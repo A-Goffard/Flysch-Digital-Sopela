@@ -16,7 +16,7 @@
 }
 
 .logo {
-    max-width: 15rem;
+    max-width: 22.5rem;
 }
 
 .hojitas {
@@ -88,4 +88,8 @@ p {
 
 .animate__animated.animate__fadeIn {
     --animate-duration: 4s;
-  }
+}
+
+.animate__animated.animate__fadeOut {
+    --animation-duration: 5s;
+}
