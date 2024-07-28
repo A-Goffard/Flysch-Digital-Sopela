@@ -86,10 +86,3 @@ p {
     margin: 1rem;
 }
 
-.animate__animated.animate__fadeIn {
-    --animate-duration: 4s;
-}
-
-.animate__animated.animate__fadeOut {
-    --animate-duration: 4s;
-}
