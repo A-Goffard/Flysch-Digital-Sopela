@@ -31,7 +31,7 @@ export class HomeComponent {
       cont.classList.add('animate__fadeOut');
     }
 
-    setTimeout(callback, 4000);
+    setTimeout(callback, 700);
   }
 
 }
