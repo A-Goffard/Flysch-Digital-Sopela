@@ -13,11 +13,25 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   goToPrueba1() {
-    this.router.navigate(['/prueba1']);
+    this.salida(() => {
+      this.router.navigate(['/prueba1']);
+    });
   }
 
   goToContext() {
-    this.router.navigate(['/context']);
+    this.salida(() => {
+      this.router.navigate(['/context']);
+    });
+  }
+  salida(callback: () => void) {
+    const cont = document.getElementById('cont');
+
+    if (cont) {
+      cont.classList.remove('animate__fadeIn');
+      cont.classList.add('animate__fadeOut');
+    }
+
+    setTimeout(callback, 4000);
   }
 
 }
