@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  constructor(private router: Router) {}
+
+  goToPrueba1() {
+    this.router.navigate(['/prueba1']);
+  }
+
+  goToContext() {
+    this.router.navigate(['/context']);
+  }
 
 }
