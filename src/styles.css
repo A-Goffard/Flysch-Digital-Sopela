@@ -52,7 +52,24 @@ h2 {
 
 h3 {
     margin: 1rem;
-    font-size: 1.7rem;
+    font-size: 2.4rem;
+}
+
+h4 {
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+
+h5 {
+    margin: 1rem;
+    font-size: 1.75rem;
+}
+
+
+h6 {
+    margin: 1rem;
+    font-size: 1.5;
 }
 
 p {
