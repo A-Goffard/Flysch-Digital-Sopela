@@ -1,6 +1,7 @@
+
+
 header {
   box-sizing: border-box;
-  background-color: var(--white);
   z-index: 99;
   width: 100%;
   position: fixed;
@@ -94,5 +95,17 @@ header nav .dropdown-nav li {
 
 li {
   padding: 0.5rem 0.5rem;
-  margin-top: 0.2rem;
+  margin: 1.2rem;
+  font-size: 2rem;
+
+}
+
+a {
+  color: var(--green);
+  font-weight: bolder;
+  text-decoration: none; /* Optional: removes the underline from links */
+}
+
+a:visited {
+  color: var(--linkgreen);
 }

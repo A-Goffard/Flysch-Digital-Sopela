@@ -5,13 +5,19 @@ import { ContextComponent } from './pages/context/context.component';
 import { Prueba1Component } from './pages/prueba1/prueba1.component';
 import { Prueba2Component } from './pages/prueba2/prueba2.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { InstructionsComponent } from './pages/instructions/instructions.component';
 
 export const routes: Routes = [
   { path: '', component: IntroComponent },
   { path: 'home', component: HomeComponent },
   { path: 'context', component: ContextComponent },
+
+  { path: 'instructions', component: InstructionsComponent },
+
   { path: 'prueba1', component: Prueba1Component },
   { path: 'prueba2', component: Prueba2Component },
+
   { path: 'contact', component: ContactoComponent },
+  
   { path: '**', redirectTo: 'home' } // Maneja rutas no encontradas
 ];

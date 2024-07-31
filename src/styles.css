@@ -4,7 +4,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
+
+
 
 :root {
     --black: #000000;
@@ -13,6 +19,7 @@
     --ligthgreen: #26B12C;
     --green: #498536;
     --darkgreen: #2c770f;
+    --linkgreen: #2b3d23;
 }
 
 .logo {
@@ -102,4 +109,3 @@ p {
 .input-repuestas {
     margin: 1rem;
 }
-

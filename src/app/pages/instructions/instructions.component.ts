@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-instructions',
   standalone: true,
   imports: [],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './instructions.component.html',
+  styleUrl: './instructions.component.css'
 })
-export class HomeComponent {
+export class InstructionsComponent {
 
   constructor(private router: Router) {}
 
@@ -18,21 +18,11 @@ export class HomeComponent {
     });
   }
 
-  goToContext() {
+  goToContact() {
     this.salida(() => {
-      this.router.navigate(['/context']);
+      this.router.navigate(['/contact']);
     });
   }
-
-
-  goToInstructions() {
-    this.salida(() => {
-      this.router.navigate(['/instructions']);
-    });
-  }
-
-
-
   salida(callback: () => void) {
     const cont = document.getElementById('cont');
 
@@ -43,5 +33,4 @@ export class HomeComponent {
 
     setTimeout(callback, 700);
   }
-
 }

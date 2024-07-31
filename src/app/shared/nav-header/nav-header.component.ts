@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -13,6 +13,17 @@ export class NavHeaderComponent {
   mobileNavOpen = false;
   animating = false;
 
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    const dropdownNav = document.querySelector('.dropdown-nav') as HTMLElement;
+    const iconButton = document.querySelector('.icon button') as HTMLElement;
+    
+    if (this.mobileNavOpen && dropdownNav && !dropdownNav.contains(target) && !iconButton.contains(target)) {
+      this.closeMobileNav();
+    }
+  }
+  
   toggleMobileNav() {
     if (this.animating) return;
     this.mobileNavOpen = !this.mobileNavOpen;
