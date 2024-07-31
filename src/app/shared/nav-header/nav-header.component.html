@@ -1,47 +1,30 @@
-<!-- <nav>
-    <div class="nav-container">
-        <img src="images/Hojitas.png" class="menu-icon" alt="Menu" (click)="toggleMenu()">
-        <ul [class.show]="menuOpen">
-            <li><a routerLink="/">Inicio</a></li>
-            <li><a routerLink="/prueba1">Prueba 1</a></li>
-            <li><a routerLink="/prueba2">Prueba 2</a></li>
-            <li><a routerLink="/contact">Contacto</a></li>
-        </ul>
-    </div>
-</nav> -->
-
 <header>
     <nav>
-        <div class="branding">
-            <img src="assets/images/GeobiziLogo.png" class="logo" alt="Geobizi Logo">
-        </div>
-        <div class="icon">
-            <button (click)="toggleMobileNav()">
-                <img [class.icon-active]="mobileNavOpen" src="assets/images/logoBurguer.png" class="hojitas" alt="Menu">
-            </button>
-        </div>
-        <ul *ngIf="mobileNavOpen" class="dropdown-nav">
-            <li>
-                <a routerLink="/inicio" (click)="closeMobileNav()">Inicio</a>
-            </li>
-            <li>
-                <a routerLink="/context" (click)="closeMobileNav()">Contexto</a>
-            </li>
-            <li>
-                <a routerLink="/contact" (click)="closeMobileNav()">Contacto</a>
-            </li>
-            <li>
-                <a routerLink="/prueba1" (click)="closeMobileNav()">Prueba 1</a>
-            </li>
-            <li>
-                <a routerLink="/prueba2" (click)="closeMobileNav()">Prueba 2</a>
-            </li>
-            <li>
-                <a routerLink="/blog" (click)="closeMobileNav()">Blog</a>
-            </li>
-            <li>
-                <a routerLink="/contacto" (click)="closeMobileNav()">Contacto</a>
-            </li>
-        </ul>
+      <!-- <div class="branding">
+        <img src="images/GeobiziLogo.png" class="logo" alt="Geobizi Logo">
+      </div> -->
+      <div class="icon">
+        <button (click)="toggleMobileNav()">
+          <img [class.icon-active]="mobileNavOpen" src="images/Hojitas.png" class="hojitas" alt="Menu">
+        </button>
+      </div>
+      <ul [ngClass]="{'dropdown-nav': true, 'open': mobileNavOpen, 'close': !mobileNavOpen}">
+        <li>
+          <a routerLink="/inicio" (click)="closeMobileNav()">Inicio</a>
+        </li>
+        <li>
+          <a routerLink="/context" (click)="closeMobileNav()">Contexto</a>
+        </li>
+        <li>
+          <a routerLink="/contact" (click)="closeMobileNav()">Contacto</a>
+        </li>
+        <li>
+          <a routerLink="/prueba1" (click)="closeMobileNav()">Prueba 1</a>
+        </li>
+        <li>
+          <a routerLink="/prueba2" (click)="closeMobileNav()">Prueba 2</a>
+        </li>
+      </ul>
     </nav>
-</header>
+  </header>
+  

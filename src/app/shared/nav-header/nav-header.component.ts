@@ -11,9 +11,27 @@ import { CommonModule } from '@angular/common';
 })
 export class NavHeaderComponent {
   mobileNavOpen = false;
+  animating = false;
 
   toggleMobileNav() {
+    if (this.animating) return;
     this.mobileNavOpen = !this.mobileNavOpen;
+    this.animating = true;
+    const dropdownNav = document.querySelector('.dropdown-nav') as HTMLElement;
+    if (dropdownNav) {
+      if (this.mobileNavOpen) {
+        dropdownNav.classList.remove('close', 'animate__fadeOutLeft');
+        dropdownNav.classList.add('open', 'animate__animated', 'animate__fadeInLeft');
+      } else {
+        dropdownNav.classList.remove('open', 'animate__fadeInLeft');
+        dropdownNav.classList.add('close', 'animate__animated', 'animate__fadeOutLeft');
+      }
+
+      dropdownNav.addEventListener('animationend', () => {
+        this.animating = false;
+        dropdownNav.classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__fadeOutLeft');
+      }, { once: true });
+    }
     const hojitasIcon = document.querySelector('.hojitas') as HTMLElement;
     if (hojitasIcon) {
       hojitasIcon.style.transform = this.mobileNavOpen ? 'rotate(45deg)' : 'rotate(0deg)';
@@ -21,7 +39,18 @@ export class NavHeaderComponent {
   }
 
   closeMobileNav() {
+    if (this.animating) return;
     this.mobileNavOpen = false;
+    this.animating = true;
+    const dropdownNav = document.querySelector('.dropdown-nav') as HTMLElement;
+    if (dropdownNav) {
+      dropdownNav.classList.remove('open', 'animate__fadeInLeft');
+      dropdownNav.classList.add('close', 'animate__animated', 'animate__fadeOutLeft');
+      dropdownNav.addEventListener('animationend', () => {
+        this.animating = false;
+        dropdownNav.classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__fadeOutLeft');
+      }, { once: true });
+    }
     const hojitasIcon = document.querySelector('.hojitas') as HTMLElement;
     if (hojitasIcon) {
       hojitasIcon.style.transform = 'rotate(0deg)';
