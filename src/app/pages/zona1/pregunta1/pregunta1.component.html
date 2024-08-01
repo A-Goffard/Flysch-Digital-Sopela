@@ -1,29 +1,19 @@
-<h4>Primera pregunta</h4>
-<h5>¿En qué playa te encuentras ahora mismo?</h5>
-<div class="respuestas">
-  <div class="opcion">
-    <input type="radio" id="opcion1" name="pregunta1" value="Atxabiribil" [disabled]="respuestaCorrecta" (change)="onOptionChange($event)">
-    <label for="opcion1"> Atxabiribil </label>
-    <svg *ngIf="respuestaCorrecta && seleccion === 'Atxabiribil'" class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-      <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-      <path class="checkmark__check" fill="none" d="M14 27l7 7 16-16"/>
-    </svg>
+<div id="cont" class="container index animate__animated animate__fadeIn">
+  <h4>Primera pregunta</h4>
+  <h5>¿En qué playa te encuentras ahora mismo?</h5>
+  <div class="respuestas">
+    <div class="opcion">
+      <input type="radio" id="opcion1" name="pregunta1" value="Atxabiribil" [disabled]="respuestaCorrecta" (change)="onOptionChange($event)">
+      <label for="opcion1" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Atxabiribil', 'incorrecta': respuestaIncorrecta && seleccion === 'Atxabiribil'}">Atxabiribil</label>
+    </div>
+    <div class="opcion">
+      <input type="radio" id="opcion2" name="pregunta1" value="Arrietara" [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
+      <label for="opcion2" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Arrietara', 'incorrecta': respuestaIncorrecta && seleccion === 'Arrietara'}">Arrietara</label>
+    </div>
+    <div class="opcion">
+      <input type="radio" id="opcion3" name="pregunta1" value="Larrabasterra" [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
+      <label for="opcion3" [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Larrabasterra', 'incorrecta': respuestaIncorrecta && seleccion === 'Larrabasterra'}">Larrabasterra</label>
+    </div>
   </div>
-  <div class="opcion">
-    <input type="radio" id="opcion2" name="pregunta1" value="Arrietara" [disabled]="respuestaCorrecta" (change)="onOptionChange($event); mostrarPista()">
-    <label for="opcion2"> Arrietara </label>
-    <svg *ngIf="respuestaIncorrecta && seleccion === 'Arrietara'" class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-      <circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none"/>
-      <path class="crossmark__cross" fill="none" d="M16 16l20 20m0-20L16 36"/>
-    </svg>
-  </div>
-  <div class="opcion">
-    <input type="radio" id="opcion3" name="pregunta1" value="Larrabasterra" [disabled]="respuestaCorrecta" (change)="onOptionChange($event); mostrarPista()">
-    <label for="opcion3"> Larrabasterra </label>
-    <svg *ngIf="respuestaIncorrecta && seleccion === 'Larrabasterra'" class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-      <circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none"/>
-      <path class="crossmark__cross" fill="none" d="M16 16l20 20m0-20L16 36"/>
-    </svg>
-  </div>
+  <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
 </div>
-<button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>

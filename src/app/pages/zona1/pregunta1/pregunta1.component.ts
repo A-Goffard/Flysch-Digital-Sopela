@@ -23,33 +23,32 @@ export class Pregunta1Component implements OnInit {
       this.respuestaCorrecta = true;
       this.respuestaIncorrecta = false;
       this.respuestasCorrectas['pregunta1'] = true;
+
+      setTimeout(() => {
+        this.router.navigate(['/zona1/pregunta2']);
+      }, 2000);
+
     } else {
       this.respuestaCorrecta = false;
       this.respuestaIncorrecta = true;
       this.respuestasCorrectas['pregunta1'] = false;
+
+      // Redirigir a 'pista1' después de 2 segundos si la respuesta es incorrecta
+      setTimeout(() => {
+        this.router.navigate(['/zona1/pista1']);
+      }, 2000);
     }
 
     localStorage.setItem('respuestasCorrectas', JSON.stringify(this.respuestasCorrectas));
     localStorage.setItem('seleccionPregunta1', this.seleccion);
   }
 
-  mostrarPista() {
-    // Simular mostrar pista
-    this.mostrarLupa = true;
-    // Despues de mostrar la pista, simular una redireccion (realizar alguna accion si es necesario)
-    setTimeout(() => {
-      this.router.navigate(['/pista1']);
-    }, 2000); // Por ejemplo, 2 segundos después de mostrar la pista
-  }
-
   ngOnInit() {
     const respuestasGuardadas = localStorage.getItem('respuestasCorrectas');
     if (respuestasGuardadas) {
       this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
-      if (this.respuestasCorrectas['pregunta1']) {
-        this.respuestaCorrecta = true;
-        this.respuestaIncorrecta = false;
-      }
+      this.respuestaCorrecta = this.respuestasCorrectas['pregunta1'] ?? false;
+      this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
     }
 
     const seleccionGuardada = localStorage.getItem('seleccionPregunta1');
