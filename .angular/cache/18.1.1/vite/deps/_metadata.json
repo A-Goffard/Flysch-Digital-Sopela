@@ -1,43 +1,37 @@
 {
-  "hash": "2cbcfafe",
-  "configHash": "6ce56821",
+  "hash": "e2f748fd",
+  "configHash": "a5c2a723",
   "lockfileHash": "e887d03c",
-  "browserHash": "cde6381f",
+  "browserHash": "e9c88a8c",
   "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "201086fe",
+      "needsInterop": false
+    },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "2b407a85",
+      "fileHash": "77f50129",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "39b4fad5",
+      "fileHash": "baa3c717",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "e7c6d73a",
-      "needsInterop": false
-    },
-    "@angular/google-maps": {
-      "src": "../../../../../node_modules/@angular/google-maps/fesm2022/google-maps.mjs",
-      "file": "@angular_google-maps.js",
-      "fileHash": "f0d3f98d",
-      "needsInterop": false
-    },
-    "@angular/common": {
-      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
-      "file": "@angular_common.js",
-      "fileHash": "5cfea5c6",
+      "fileHash": "b72942b0",
       "needsInterop": false
     },
     "express": {
       "src": "../../../../../node_modules/express/index.js",
       "file": "express.js",
-      "fileHash": "2724808e",
+      "fileHash": "79f46f5d",
       "needsInterop": true
     }
   },
