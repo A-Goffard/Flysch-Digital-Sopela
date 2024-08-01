@@ -1,49 +1,58 @@
 {
-  "hash": "fec6f820",
-  "configHash": "3677ff0d",
+  "hash": "2cbcfafe",
+  "configHash": "6ce56821",
   "lockfileHash": "e887d03c",
-  "browserHash": "c26187a2",
+  "browserHash": "cde6381f",
   "optimized": {
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "1c857252",
+      "fileHash": "2b407a85",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "f1498e21",
+      "fileHash": "39b4fad5",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "4ca51e7d",
+      "fileHash": "e7c6d73a",
       "needsInterop": false
     },
     "@angular/google-maps": {
       "src": "../../../../../node_modules/@angular/google-maps/fesm2022/google-maps.mjs",
       "file": "@angular_google-maps.js",
-      "fileHash": "1d53a813",
+      "fileHash": "f0d3f98d",
       "needsInterop": false
     },
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "e17938eb",
+      "fileHash": "5cfea5c6",
       "needsInterop": false
+    },
+    "express": {
+      "src": "../../../../../node_modules/express/index.js",
+      "file": "express.js",
+      "fileHash": "2724808e",
+      "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-4DNSV5NI": {
-      "file": "chunk-4DNSV5NI.js"
+    "chunk-EDDAWL35": {
+      "file": "chunk-EDDAWL35.js"
     },
-    "chunk-F2TMUAH5": {
-      "file": "chunk-F2TMUAH5.js"
+    "chunk-CWBYVO6A": {
+      "file": "chunk-CWBYVO6A.js"
     },
-    "chunk-2UONM32I": {
-      "file": "chunk-2UONM32I.js"
+    "chunk-7IB42AES": {
+      "file": "chunk-7IB42AES.js"
+    },
+    "chunk-EIB7IA3J": {
+      "file": "chunk-EIB7IA3J.js"
     }
   }
 }

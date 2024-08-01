@@ -25,7 +25,7 @@ export class Pregunta1Component implements OnInit {
       this.respuestasCorrectas['pregunta1'] = true;
 
       setTimeout(() => {
-        this.router.navigate(['/zona1/pregunta2']);
+        this.router.navigate(['/zona1/exito']);
       }, 2000);
 
     } else {
