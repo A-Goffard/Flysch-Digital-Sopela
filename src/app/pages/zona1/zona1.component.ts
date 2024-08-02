@@ -9,8 +9,6 @@ import { Pregunta5Component } from './pregunta5/pregunta5.component';
 import { ActividadComponent } from './actividad/actividad.component';
 import { Pista1Component } from './pregunta1/pista1/pista1.component';
 import { NavZona1Component } from "./nav-zona1/nav-zona1.component";
-import { Pista2Component } from './pregunta1/pista2/pista2.component';
-import { ExitoComponent } from './exito/exito.component';
 
 @Component({
   selector: 'app-zona1',
@@ -30,9 +28,7 @@ export const routes: Routes = [
     { path: 'pregunta4', component: Pregunta4Component },
     { path: 'pregunta5', component: Pregunta5Component },
     { path: 'actividad', component: ActividadComponent },
-    { path: 'pista1', component: Pista1Component },
-    { path: 'pista2', component: Pista2Component },
-    { path: 'exito', component: ExitoComponent }
+    { path: 'pista1', component: Pista1Component }
   ]},
 
 ];
