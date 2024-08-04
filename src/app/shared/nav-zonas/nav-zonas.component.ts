@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterModule, CommonModule],
   templateUrl: './nav-zonas.component.html',
-  styleUrl: './nav-zonas.component.css'
+  styleUrls: ['./nav-zonas.component.css']
 })
 export class NavZonasComponent {
 
