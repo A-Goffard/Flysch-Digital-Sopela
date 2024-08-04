@@ -1,5 +1,3 @@
-
-
 header {
   box-sizing: border-box;
   z-index: 99;
@@ -108,4 +106,8 @@ a {
 
 a:visited {
   color: var(--linkgreen);
+}
+
+ul {
+  margin-top: 3rem;
 }
