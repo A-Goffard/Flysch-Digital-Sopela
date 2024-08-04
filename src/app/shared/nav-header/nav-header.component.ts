@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './nav-header.component.html',
   styleUrls: ['./nav-header.component.css']
 })
+
 export class NavHeaderComponent {
   mobileNavOpen = false;
   animating = false;

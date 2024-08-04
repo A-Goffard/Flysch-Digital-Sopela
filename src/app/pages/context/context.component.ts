@@ -23,6 +23,13 @@ export class ContextComponent {
       this.router.navigate(['/contact']);
     });
   }
+
+  goToInstructions() {
+    this.salida(() => {
+      this.router.navigate(['/instructions']);
+    });
+  }
+  
   salida(callback: () => void) {
     const cont = document.getElementById('cont');
 
