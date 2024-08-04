@@ -12,9 +12,9 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
-  goToZona1() {
+  goToZonas() {
     this.salida(() => {
-      this.router.navigate(['/zona1']);
+      this.router.navigate(['/zonas']);
     });
   }
 
