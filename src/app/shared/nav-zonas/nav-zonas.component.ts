@@ -3,13 +3,14 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'shared-nav-zona1',
+  selector: 'app-nav-zonas',
   standalone: true,
   imports: [RouterModule, CommonModule],
-  templateUrl: './nav-zona1.component.html',
-  styleUrls: ['./nav-zona1.component.css']
+  templateUrl: './nav-zonas.component.html',
+  styleUrl: './nav-zonas.component.css'
 })
-export class NavZona1Component {
+export class NavZonasComponent {
+
   mobileNavOpenZ1 = false;
   animating = false;
 

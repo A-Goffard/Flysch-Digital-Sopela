@@ -1,0 +1,118 @@
+.mariposita {
+    width: 3rem;
+}
+
+header {
+    box-sizing: border-box;
+    z-index: 99;
+    width: 100%;
+    position: fixed;
+    transition: 0.5s ease all;
+}
+
+header nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em 0;
+    transition: 0.5s ease all;
+    width: 100%;
+    margin: 0;
+}
+
+header nav .branding img {
+    max-height: 5rem;
+}
+
+header nav .mariposita {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 100;
+}
+
+header nav button {
+    width: 4rem;
+    cursor: pointer;
+    transition: 0.8s ease all;
+    background-color: transparent;
+    border: none;
+    margin: 0.5rem;
+}
+
+header nav .hojitas {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+header nav .dropdown-navZ1 {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    background-color: var(--white);
+    top: 0;
+    left: -100%;
+    padding-top: 1rem;
+    transition: left 0.5s ease;
+}
+
+header nav .dropdown-navZ1.open {
+    left: 0;
+}
+
+header nav .dropdown-navZ1.close {
+    left: -100%;
+}
+
+header nav .dropdown-navZ1 li {
+    margin-left: 1rem;
+}
+
+.link {
+    font-weight: bold;
+    color: var(--green);
+    position: relative;
+    transition: 250ms ease all;
+}
+
+.link:hover {
+    color: var(--lightgreen);
+    cursor: pointer;
+}
+
+.link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--lightgreen);
+}
+
+ul {
+    margin-top: 3rem;
+}
+
+li {
+    padding: 0.5rem 0.5rem;
+    margin: 1.2rem;
+    font-size: 2rem;
+
+}
+
+a {
+    color: var(--green);
+    font-weight: bolder;
+    text-decoration: none;
+    /* Optional: removes the underline from links */
+}
+
+a:visited {
+    color: var(--linkgreen);
+}

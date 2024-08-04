@@ -22,6 +22,10 @@
     --linkgreen: #2b3d23;
 }
 
+.container {
+    margin-top: 5rem;
+}
+
 .logo {
     max-width: 22.5rem;
 }
@@ -81,7 +85,7 @@ h6 {
 
 p {
     margin: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .btnA {
