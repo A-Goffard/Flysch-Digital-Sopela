@@ -1,4 +1,4 @@
-.cont-marcadores{
+.cont-marcadores {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -11,9 +11,14 @@
     width: 2rem;
     height: 2rem;
     margin: 1rem;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.marcadores.animate {
+    transform: scale(1.2);
 }
 
 .green {
     background-color: var(--ligthgreen);
 }
-
