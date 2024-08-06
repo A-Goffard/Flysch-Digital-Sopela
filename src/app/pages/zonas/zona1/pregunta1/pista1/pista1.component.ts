@@ -13,7 +13,6 @@ export class Pista1Component {
   constructor(private router: Router) {}
 
   volver() {
-    this.router.navigate(['./pregunta1']);
+    this.router.navigate(['/zona1/pregunta1']);
   }
 }
-

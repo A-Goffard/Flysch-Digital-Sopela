@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-zona1-pregunta1',
+  selector: 'app-pregunta1',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './pregunta1.component.html',
@@ -25,7 +25,7 @@ export class Pregunta1Component implements OnInit {
     if (this.seleccion === 'Atxabiribil') {
       this.respuestaCorrecta = true;
       this.respuestaIncorrecta = false;
-      this.respuestasCorrectas['pregunta1'] = true;
+      this.respuestasCorrectas['/zona1/pregunta1'] = true;
 
       setTimeout(() => {
         this.router.navigate(['/zona1/pregunta2']);
@@ -34,11 +34,10 @@ export class Pregunta1Component implements OnInit {
     } else {
       this.respuestaCorrecta = false;
       this.respuestaIncorrecta = true;
-      this.respuestasCorrectas['pregunta1'] = false;
+      this.respuestasCorrectas['/zona1/pregunta1'] = false;
 
-      // Redirigir a 'pista1' después de 2 segundos si la respuesta es incorrecta
       setTimeout(() => {
-        this.router.navigate(['pista1']);
+        this.router.navigate(['/zona1/pregunta1/pista1']);
       }, 2000);
     }
 
@@ -50,7 +49,7 @@ export class Pregunta1Component implements OnInit {
     const respuestasGuardadas = localStorage.getItem('respuestasCorrectas');
     if (respuestasGuardadas) {
       this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
-      this.respuestaCorrecta = this.respuestasCorrectas['pregunta1'] ?? false;
+      this.respuestaCorrecta = this.respuestasCorrectas['/zona1/pregunta1'] ?? false;
       this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
     }
 
@@ -64,7 +63,7 @@ export class Pregunta1Component implements OnInit {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement) {
       this.seleccion = inputElement.value;
-      this.comprobarPressed = false;  // Resetear la variable cuando se selecciona una nueva opción
+      this.comprobarPressed = false;
     }
   }
 }
