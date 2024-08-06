@@ -14,3 +14,5 @@ import { MarcadoresComponent } from "./componentes/marcadores/marcadores.compone
 export class Zona1Component{
 
 }
+
+

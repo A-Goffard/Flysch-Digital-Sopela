@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-pregunta1',
+  selector: 'app-zona1-pregunta1',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './pregunta1.component.html',
   styleUrls: ['./pregunta1.component.css']
 })
@@ -51,6 +51,11 @@ export class Pregunta1Component implements OnInit {
 
     localStorage.setItem('respuestasCorrectas', JSON.stringify(this.respuestasCorrectas));
     localStorage.setItem('seleccionPregunta1', this.seleccion);
+  }
+
+  goToZona1() {
+    console.log('Navigating to Zona 1');
+    this.router.navigate(['/zona1']);
   }
 
   ngOnInit() {
