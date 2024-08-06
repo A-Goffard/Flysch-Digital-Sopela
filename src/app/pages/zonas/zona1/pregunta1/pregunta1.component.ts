@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-pregunta1',
+  selector: 'app-zona1-pregunta1',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './pregunta1.component.html',
@@ -15,10 +15,13 @@ export class Pregunta1Component implements OnInit {
   respuestaIncorrecta = false;
   respuestasCorrectas: { [key: string]: boolean } = {};
   seleccion: string = '';
+  comprobarPressed = false;
 
   constructor(private router: Router) {}
 
   comprobar() {
+    this.comprobarPressed = true;
+    
     if (this.seleccion === 'Atxabiribil') {
       this.respuestaCorrecta = true;
       this.respuestaIncorrecta = false;
@@ -35,7 +38,7 @@ export class Pregunta1Component implements OnInit {
 
       // Redirigir a 'pista1' después de 2 segundos si la respuesta es incorrecta
       setTimeout(() => {
-        this.router.navigate(['/zona1/pista1']);
+        this.router.navigate(['pista1']);
       }, 2000);
     }
 
@@ -61,6 +64,7 @@ export class Pregunta1Component implements OnInit {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement) {
       this.seleccion = inputElement.value;
+      this.comprobarPressed = false;  // Resetear la variable cuando se selecciona una nueva opción
     }
   }
 }
