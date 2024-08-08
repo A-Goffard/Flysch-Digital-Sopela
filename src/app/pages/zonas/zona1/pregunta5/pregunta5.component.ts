@@ -24,35 +24,35 @@ export class Pregunta5Component implements OnInit {
     if (this.seleccion === 'Sedimentaria') {
       this.respuestaCorrecta = true;
       this.respuestaIncorrecta = false;
-      this.respuestasCorrectas['/zona1/pregunta1'] = true;
+      this.respuestasCorrectas['/zona1/pregunta5'] = true;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaPregunta1', 'true');
+      localStorage.setItem('respuestaCorrectaPregunta5', 'true');
   
       setTimeout(() => {
-        this.router.navigate(['/zona1/pregunta2']);
+        this.router.navigate(['/zona2']);
       }, 2000);
     } else {
       this.respuestaCorrecta = false;
       this.respuestaIncorrecta = true;
-      this.respuestasCorrectas['/zona1/pregunta1'] = false;
+      this.respuestasCorrectas['/zona1/pregunta5'] = false;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaPregunta1', 'false');
+      localStorage.setItem('respuestaCorrectaPregunta5', 'false');
   
       if (this.seleccion === 'Metamórfica') {
         setTimeout(() => {
-          this.router.navigate(['/zona1/pregunta1/pista1']);
+          this.router.navigate(['/zona1/pregunta5/pista1']);
         }, 2000);
       } else {
         setTimeout(() => {
-          this.router.navigate(['/zona1/pregunta1/pista2']);
+          this.router.navigate(['/zona1/pregunta5/pista2']);
         }, 2000);
       }
     }
   
     localStorage.setItem('respuestasCorrectas', JSON.stringify(this.respuestasCorrectas));
-    localStorage.setItem('seleccionPregunta1', this.seleccion);
+    localStorage.setItem('seleccionPregunta5', this.seleccion);
   }
   
 
@@ -73,8 +73,8 @@ export class Pregunta5Component implements OnInit {
     }
   
     // Recuperar el estado específico de la pregunta 1
-    const respuestaCorrectaPregunta1 = localStorage.getItem('respuestaCorrectaPregunta1');
-    this.respuestaCorrecta = respuestaCorrectaPregunta1 === 'true';
+    const respuestaCorrectaPregunta5 = localStorage.getItem('respuestaCorrectaPregunta5');
+    this.respuestaCorrecta = respuestaCorrectaPregunta5 === 'true';
     this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
   }
   

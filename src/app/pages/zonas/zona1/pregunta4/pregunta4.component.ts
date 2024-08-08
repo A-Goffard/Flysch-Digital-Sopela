@@ -72,8 +72,8 @@ export class Pregunta4Component implements OnInit {
     }
   
     // Recuperar el estado específico de la pregunta 2
-    const respuestaCorrectaPregunta3 = localStorage.getItem('respuestaCorrectaPregunta4');
-    this.respuestaCorrecta = respuestaCorrectaPregunta3 === 'true';
+    const respuestaCorrectaPregunta4 = localStorage.getItem('respuestaCorrectaPregunta4');
+    this.respuestaCorrecta = respuestaCorrectaPregunta4 === 'true';
     this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
   }
   
