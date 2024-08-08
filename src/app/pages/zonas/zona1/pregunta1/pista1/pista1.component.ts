@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-pista1',
+  selector: 'app-zona1-pregunta1-pista1',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './pista1.component.html',
@@ -16,4 +16,3 @@ export class Pista1Component {
     this.router.navigate(['/zona1/pregunta1']);
   }
 }
-

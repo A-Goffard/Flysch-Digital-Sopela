@@ -1,0 +1,40 @@
+.respuestas {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .opcion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-size: 2rem;
+    margin-left: 1rem;
+    transition: all 0.3s ease; /* Para animaciones suaves */
+  }
+  
+  .correcta {
+    color: #4caf50; /* Verde para la respuesta correcta */
+    font-size: 2.2rem; /* Aumentar tamaño para respuesta correcta */
+  }
+  
+  .incorrecta {
+    color: #f44336; /* Rojo para la respuesta incorrecta */
+    animation: vibrate 0.5s linear; /* Animación de vibración */
+  }
+  
+  @keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .btnA {
+    margin-top: 20px;
+  }
+  

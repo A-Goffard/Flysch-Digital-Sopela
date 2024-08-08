@@ -114,3 +114,35 @@ a {
 a:visited {
     color: var(--linkgreen);
 }
+
+/* nav-zonas.component.css */
+.mariposita {
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.rotate {
+    animation: rotateScaleAnimation 0.7s;
+}
+
+@keyframes rotateScaleAnimation {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(15deg) scale(1.1);
+    }
+
+    50% {
+        transform: rotate(-15deg) scale(1.1);
+    }
+
+    75% {
+        transform: rotate(15deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}

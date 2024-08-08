@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-pista2',
+  selector: 'app-zona5-pregunta2-pista2',
   standalone: true,
   imports: [],
   templateUrl: './pista2.component.html',

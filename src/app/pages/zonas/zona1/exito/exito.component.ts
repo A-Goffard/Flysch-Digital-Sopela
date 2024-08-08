@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-exito',
+  selector: 'app-zona1-exito',
   standalone: true,
   imports: [],
   templateUrl: './exito.component.html',
