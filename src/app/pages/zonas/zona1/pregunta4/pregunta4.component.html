@@ -1,1 +1,26 @@
-<p>pregunta4 works!</p>
+<div id="cont" class="container index animate__animated animate__fadeIn">
+    <h4>Siguiente pregunta</h4>
+    <h5>¿Cuántos millones de años (Ma) tiene la roca roja que parece tener venas o raices blancas?</h5>
+    <div class="respuestas">
+        <div class="opcion">
+            <input type="radio" id="opcion3" name="pregunta1" value="Triceratops" [disabled]="respuestaCorrecta"
+                (change)="onOptionChange($event);">
+            <label for="opcion3"
+                [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Triceratops', 'incorrecta': respuestaIncorrecta && seleccion === 'Triceratops' && comprobarPressed}">Triceratops</label>
+        </div>
+        <div class="opcion">
+            <input type="radio" id="opcion2" name="pregunta1" value="Herrerasaurus"
+                [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
+            <label for="opcion2"
+                [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Herrerasaurus', 'incorrecta': respuestaIncorrecta && seleccion === 'Herrerasaurus' && comprobarPressed}">Herrerasaurus</label>
+        </div>
+        <div class="opcion">
+            <input type="radio" id="opcion1" name="pregunta1" value="Kentrosaurus"
+                [disabled]="respuestaCorrecta" (change)="onOptionChange($event)">
+            <label for="opcion1"
+                [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Kentrosaurus', 'incorrecta': respuestaIncorrecta && seleccion === 'Kentrosaurus' && comprobarPressed}">Kentrosaurus</label>
+        </div>
+    </div>
+    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+    <button (click)="goToZona1()" class="btnA">Zona 1</button>
+</div>
