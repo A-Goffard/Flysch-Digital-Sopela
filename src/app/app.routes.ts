@@ -34,16 +34,16 @@ import { Pregunta4Component as Zona2Pregunta4Component } from './pages/zonas/zon
 import { Pregunta5Component as Zona2Pregunta5Component } from './pages/zonas/zona2/pregunta5/pregunta5.component';
 import { ActividadComponent as Zona2ActividadComponent } from './pages/zonas/zona2/actividad/actividad.component';
 import { ExitoComponent as Zona2ExitoComponent } from './pages/zonas/zona2/exito/exito.component';
-import { Pista1Component as Zona2Pregunta1Pista1Component } from './pages/zonas/zona1/pregunta1/pista1/pista1.component';
-import { Pista2Component as Zona2Pregunta1Pista2Component } from './pages/zonas/zona1/pregunta1/pista2/pista2.component';
-import { Pista1Component as Zona2Pregunta2Pista1Component } from './pages/zonas/zona1/pregunta2/pista1/pista1.component';
-import { Pista2Component as Zona2Pregunta2Pista2Component } from './pages/zonas/zona1/pregunta2/pista2/pista2.component';
-import { Pista1Component as Zona2Pregunta3Pista1Component } from './pages/zonas/zona1/pregunta3/pista1/pista1.component';
-import { Pista2Component as Zona2Pregunta3Pista2Component } from './pages/zonas/zona1/pregunta3/pista2/pista2.component';
-import { Pista1Component as Zona2Pregunta4Pista1Component } from './pages/zonas/zona1/pregunta4/pista1/pista1.component';
-import { Pista2Component as Zona2Pregunta4Pista2Component } from './pages/zonas/zona1/pregunta4/pista2/pista2.component';
-import { Pista1Component as Zona2Pregunta5Pista1Component } from './pages/zonas/zona1/pregunta5/pista1/pista1.component';
-import { Pista2Component as Zona2Pregunta5Pista2Component } from './pages/zonas/zona1/pregunta5/pista2/pista2.component';
+import { Pista1Component as Zona2Pregunta1Pista1Component } from './pages/zonas/zona2/pregunta1/pista1/pista1.component';
+import { Pista2Component as Zona2Pregunta1Pista2Component } from './pages/zonas/zona2/pregunta1/pista2/pista2.component';
+import { Pista1Component as Zona2Pregunta2Pista1Component } from './pages/zonas/zona2/pregunta2/pista1/pista1.component';
+import { Pista2Component as Zona2Pregunta2Pista2Component } from './pages/zonas/zona2/pregunta2/pista2/pista2.component';
+import { Pista1Component as Zona2Pregunta3Pista1Component } from './pages/zonas/zona2/pregunta3/pista1/pista1.component';
+import { Pista2Component as Zona2Pregunta3Pista2Component } from './pages/zonas/zona2/pregunta3/pista2/pista2.component';
+import { Pista1Component as Zona2Pregunta4Pista1Component } from './pages/zonas/zona2/pregunta4/pista1/pista1.component';
+import { Pista2Component as Zona2Pregunta4Pista2Component } from './pages/zonas/zona2/pregunta4/pista2/pista2.component';
+import { Pista1Component as Zona2Pregunta5Pista1Component } from './pages/zonas/zona2/pregunta5/pista1/pista1.component';
+import { Pista2Component as Zona2Pregunta5Pista2Component } from './pages/zonas/zona2/pregunta5/pista2/pista2.component';
 
 
 import { Zona3Component } from './pages/zonas/zona3/zona3.component';
@@ -54,16 +54,16 @@ import { Pregunta4Component as Zona3Pregunta4Component } from './pages/zonas/zon
 import { Pregunta5Component as Zona3Pregunta5Component } from './pages/zonas/zona3/pregunta5/pregunta5.component';
 import { ActividadComponent as Zona3ActividadComponent } from './pages/zonas/zona3/actividad/actividad.component';
 import { ExitoComponent as Zona3ExitoComponent } from './pages/zonas/zona3/exito/exito.component';
-import { Pista1Component as Zona3Pregunta1Pista1Component } from './pages/zonas/zona1/pregunta1/pista1/pista1.component';
-import { Pista2Component as Zona3Pregunta1Pista2Component } from './pages/zonas/zona1/pregunta1/pista2/pista2.component';
-import { Pista1Component as Zona3Pregunta2Pista1Component } from './pages/zonas/zona1/pregunta2/pista1/pista1.component';
-import { Pista2Component as Zona3Pregunta2Pista2Component } from './pages/zonas/zona1/pregunta2/pista2/pista2.component';
-import { Pista1Component as Zona3Pregunta3Pista1Component } from './pages/zonas/zona1/pregunta3/pista1/pista1.component';
-import { Pista2Component as Zona3Pregunta3Pista2Component } from './pages/zonas/zona1/pregunta3/pista2/pista2.component';
-import { Pista1Component as Zona3Pregunta4Pista1Component } from './pages/zonas/zona1/pregunta4/pista1/pista1.component';
-import { Pista2Component as Zona3Pregunta4Pista2Component } from './pages/zonas/zona1/pregunta4/pista2/pista2.component';
-import { Pista1Component as Zona3Pregunta5Pista1Component } from './pages/zonas/zona1/pregunta5/pista1/pista1.component';
-import { Pista2Component as Zona3Pregunta5Pista2Component } from './pages/zonas/zona1/pregunta5/pista2/pista2.component';
+import { Pista1Component as Zona3Pregunta1Pista1Component } from './pages/zonas/zona3/pregunta1/pista1/pista1.component';
+import { Pista2Component as Zona3Pregunta1Pista2Component } from './pages/zonas/zona3/pregunta1/pista2/pista2.component';
+import { Pista1Component as Zona3Pregunta2Pista1Component } from './pages/zonas/zona3/pregunta2/pista1/pista1.component';
+import { Pista2Component as Zona3Pregunta2Pista2Component } from './pages/zonas/zona3/pregunta2/pista2/pista2.component';
+import { Pista1Component as Zona3Pregunta3Pista1Component } from './pages/zonas/zona3/pregunta3/pista1/pista1.component';
+import { Pista2Component as Zona3Pregunta3Pista2Component } from './pages/zonas/zona3/pregunta3/pista2/pista2.component';
+import { Pista1Component as Zona3Pregunta4Pista1Component } from './pages/zonas/zona3/pregunta4/pista1/pista1.component';
+import { Pista2Component as Zona3Pregunta4Pista2Component } from './pages/zonas/zona3/pregunta4/pista2/pista2.component';
+import { Pista1Component as Zona3Pregunta5Pista1Component } from './pages/zonas/zona3/pregunta5/pista1/pista1.component';
+import { Pista2Component as Zona3Pregunta5Pista2Component } from './pages/zonas/zona3/pregunta5/pista2/pista2.component';
 
 
 import { Zona4Component } from './pages/zonas/zona4/zona4.component';
@@ -74,16 +74,16 @@ import { Pregunta4Component as Zona4Pregunta4Component } from './pages/zonas/zon
 import { Pregunta5Component as Zona4Pregunta5Component } from './pages/zonas/zona4/pregunta5/pregunta5.component';
 import { ActividadComponent as Zona4ActividadComponent } from './pages/zonas/zona4/actividad/actividad.component';
 import { ExitoComponent as Zona4ExitoComponent } from './pages/zonas/zona4/exito/exito.component';
-import { Pista1Component as Zona4Pregunta1Pista1Component } from './pages/zonas/zona1/pregunta1/pista1/pista1.component';
-import { Pista2Component as Zona4Pregunta1Pista2Component } from './pages/zonas/zona1/pregunta1/pista2/pista2.component';
-import { Pista1Component as Zona4Pregunta2Pista1Component } from './pages/zonas/zona1/pregunta2/pista1/pista1.component';
-import { Pista2Component as Zona4Pregunta2Pista2Component } from './pages/zonas/zona1/pregunta2/pista2/pista2.component';
-import { Pista1Component as Zona4Pregunta3Pista1Component } from './pages/zonas/zona1/pregunta3/pista1/pista1.component';
-import { Pista2Component as Zona4Pregunta3Pista2Component } from './pages/zonas/zona1/pregunta3/pista2/pista2.component';
-import { Pista1Component as Zona4Pregunta4Pista1Component } from './pages/zonas/zona1/pregunta4/pista1/pista1.component';
-import { Pista2Component as Zona4Pregunta4Pista2Component } from './pages/zonas/zona1/pregunta4/pista2/pista2.component';
-import { Pista1Component as Zona4Pregunta5Pista1Component } from './pages/zonas/zona1/pregunta5/pista1/pista1.component';
-import { Pista2Component as Zona4Pregunta5Pista2Component } from './pages/zonas/zona1/pregunta5/pista2/pista2.component';
+import { Pista1Component as Zona4Pregunta1Pista1Component } from './pages/zonas/zona4/pregunta1/pista1/pista1.component';
+import { Pista2Component as Zona4Pregunta1Pista2Component } from './pages/zonas/zona4/pregunta1/pista2/pista2.component';
+import { Pista1Component as Zona4Pregunta2Pista1Component } from './pages/zonas/zona4/pregunta2/pista1/pista1.component';
+import { Pista2Component as Zona4Pregunta2Pista2Component } from './pages/zonas/zona4/pregunta2/pista2/pista2.component';
+import { Pista1Component as Zona4Pregunta3Pista1Component } from './pages/zonas/zona4/pregunta3/pista1/pista1.component';
+import { Pista2Component as Zona4Pregunta3Pista2Component } from './pages/zonas/zona4/pregunta3/pista2/pista2.component';
+import { Pista1Component as Zona4Pregunta4Pista1Component } from './pages/zonas/zona4/pregunta4/pista1/pista1.component';
+import { Pista2Component as Zona4Pregunta4Pista2Component } from './pages/zonas/zona4/pregunta4/pista2/pista2.component';
+import { Pista1Component as Zona4Pregunta5Pista1Component } from './pages/zonas/zona4/pregunta5/pista1/pista1.component';
+import { Pista2Component as Zona4Pregunta5Pista2Component } from './pages/zonas/zona4/pregunta5/pista2/pista2.component';
 
 
 import { Zona5Component } from './pages/zonas/zona5/zona5.component';
@@ -94,16 +94,16 @@ import { Pregunta4Component as Zona5Pregunta4Component } from './pages/zonas/zon
 import { Pregunta5Component as Zona5Pregunta5Component } from './pages/zonas/zona5/pregunta5/pregunta5.component';
 import { ActividadComponent as Zona5ActividadComponent } from './pages/zonas/zona5/actividad/actividad.component';
 import { ExitoComponent as Zona5ExitoComponent } from './pages/zonas/zona5/exito/exito.component';
-import { Pista1Component as Zona5Pregunta1Pista1Component } from './pages/zonas/zona1/pregunta1/pista1/pista1.component';
-import { Pista2Component as Zona5Pregunta1Pista2Component } from './pages/zonas/zona1/pregunta1/pista2/pista2.component';
-import { Pista1Component as Zona5Pregunta2Pista1Component } from './pages/zonas/zona1/pregunta2/pista1/pista1.component';
-import { Pista2Component as Zona5Pregunta2Pista2Component } from './pages/zonas/zona1/pregunta2/pista2/pista2.component';
-import { Pista1Component as Zona5Pregunta3Pista1Component } from './pages/zonas/zona1/pregunta3/pista1/pista1.component';
-import { Pista2Component as Zona5Pregunta3Pista2Component } from './pages/zonas/zona1/pregunta3/pista2/pista2.component';
-import { Pista1Component as Zona5Pregunta4Pista1Component } from './pages/zonas/zona1/pregunta4/pista1/pista1.component';
-import { Pista2Component as Zona5Pregunta4Pista2Component } from './pages/zonas/zona1/pregunta4/pista2/pista2.component';
-import { Pista1Component as Zona5Pregunta5Pista1Component } from './pages/zonas/zona1/pregunta5/pista1/pista1.component';
-import { Pista2Component as Zona5Pregunta5Pista2Component } from './pages/zonas/zona1/pregunta5/pista2/pista2.component';
+import { Pista1Component as Zona5Pregunta1Pista1Component } from './pages/zonas/zona5/pregunta1/pista1/pista1.component';
+import { Pista2Component as Zona5Pregunta1Pista2Component } from './pages/zonas/zona5/pregunta1/pista2/pista2.component';
+import { Pista1Component as Zona5Pregunta2Pista1Component } from './pages/zonas/zona5/pregunta2/pista1/pista1.component';
+import { Pista2Component as Zona5Pregunta2Pista2Component } from './pages/zonas/zona5/pregunta2/pista2/pista2.component';
+import { Pista1Component as Zona5Pregunta3Pista1Component } from './pages/zonas/zona5/pregunta3/pista1/pista1.component';
+import { Pista2Component as Zona5Pregunta3Pista2Component } from './pages/zonas/zona5/pregunta3/pista2/pista2.component';
+import { Pista1Component as Zona5Pregunta4Pista1Component } from './pages/zonas/zona5/pregunta4/pista1/pista1.component';
+import { Pista2Component as Zona5Pregunta4Pista2Component } from './pages/zonas/zona5/pregunta4/pista2/pista2.component';
+import { Pista1Component as Zona5Pregunta5Pista1Component } from './pages/zonas/zona5/pregunta5/pista1/pista1.component';
+import { Pista2Component as Zona5Pregunta5Pista2Component } from './pages/zonas/zona5/pregunta5/pista2/pista2.component';
 
 
 export const routes: Routes = [

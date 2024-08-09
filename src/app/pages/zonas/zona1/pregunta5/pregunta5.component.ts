@@ -30,7 +30,7 @@ export class Pregunta5Component implements OnInit {
       localStorage.setItem('respuestaCorrectaPregunta5', 'true');
   
       setTimeout(() => {
-        this.router.navigate(['/zona2']);
+        this.router.navigate(['/zona1']);
       }, 2000);
     } else {
       this.respuestaCorrecta = false;
@@ -67,7 +67,7 @@ export class Pregunta5Component implements OnInit {
       this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
     }
   
-    const seleccionGuardada = localStorage.getItem('seleccionPregunta1');
+    const seleccionGuardada = localStorage.getItem('seleccionPregunta5');
     if (seleccionGuardada) {
       this.seleccion = seleccionGuardada;
     }
