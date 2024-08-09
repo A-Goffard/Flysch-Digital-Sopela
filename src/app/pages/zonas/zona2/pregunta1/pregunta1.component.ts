@@ -14,14 +14,14 @@ export class Pregunta1Component implements OnInit {
   respuestaCorrectaZ2 = false;
   respuestaIncorrectaZ2 = false;
   respuestasCorrectasZ2: { [key: string]: boolean } = {};
-  seleccion: string = '';
-  comprobarPressed = false;
+  seleccionZ2: string = '';
+  comprobarPressedZ2 = false;
 
   constructor(private router: Router) {}
   comprobar() {
-    this.comprobarPressed = true;
+    this.comprobarPressedZ2 = true;
   
-    if (this.seleccion === 'Atxabiribil') {
+    if (this.seleccionZ2 === 'Roja') {
       this.respuestaCorrectaZ2 = true;
       this.respuestaIncorrectaZ2 = false;
       this.respuestasCorrectasZ2['/zona2/pregunta1'] = true;
@@ -38,9 +38,9 @@ export class Pregunta1Component implements OnInit {
       this.respuestasCorrectasZ2['/zona2/pregunta1'] = false;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaZ2Pregunta1Z2', 'false');
+      localStorage.setItem('respuestaCorrectaZ2Pregunta1', 'false');
   
-      if (this.seleccion === 'Arrietara') {
+      if (this.seleccionZ2 === 'Blanca') {
         setTimeout(() => {
           this.router.navigate(['/zona2/pregunta1/pista1']);
         }, 2000);
@@ -52,7 +52,7 @@ export class Pregunta1Component implements OnInit {
     }
   
     localStorage.setItem('respuestasCorrectasZ2', JSON.stringify(this.respuestasCorrectasZ2));
-    localStorage.setItem('seleccionPregunta1Z2', this.seleccion);
+    localStorage.setItem('seleccionZ2Pregunta1Z2', this.seleccionZ2);
   }
   
 
@@ -66,23 +66,23 @@ export class Pregunta1Component implements OnInit {
       this.respuestasCorrectasZ2 = JSON.parse(respuestasGuardadasZ2);
     }
   
-    const seleccionGuardadaZ2 = localStorage.getItem('seleccionPregunta1Z2');
-    if (seleccionGuardadaZ2) {
-      this.seleccion = seleccionGuardadaZ2;
+    const seleccionZ2GuardadaZ2 = localStorage.getItem('seleccionZ2Pregunta1Z2');
+    if (seleccionZ2GuardadaZ2) {
+      this.seleccionZ2 = seleccionZ2GuardadaZ2;
     }
   
     // Recuperar el estado específico de la pregunta 1
     const respuestaCorrectaZ2Pregunta1 = localStorage.getItem('respuestaCorrectaZ2Pregunta1');
     this.respuestaCorrectaZ2 = respuestaCorrectaZ2Pregunta1 === 'true';
-    this.respuestaIncorrectaZ2 = !this.respuestaCorrectaZ2 && !!this.seleccion;
+    this.respuestaIncorrectaZ2 = !this.respuestaCorrectaZ2 && !!this.seleccionZ2;
   }
   
 
   onOptionChange(event: Event) {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement) {
-      this.seleccion = inputElement.value;
-      this.comprobarPressed = false;
+      this.seleccionZ2 = inputElement.value;
+      this.comprobarPressedZ2 = false;
     }
   }
 }
