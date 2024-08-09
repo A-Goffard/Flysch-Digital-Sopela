@@ -1,1 +1,26 @@
-<p>pregunta3 works!</p>
+<div id="cont" class="container index animate__animated animate__fadeIn">
+    <h4>Primera pregunta</h4>
+    <h5>¿Qué se formaron al mismo tiempo que estos pliegues?</h5>
+    <div class="respuestas">
+        <div class="opcion">
+            <input type="radio" id="opcion1" name="pregunta1" value="Los Urales" [disabled]="respuestaCorrectaZ2"
+                (change)="onOptionChange($event)">
+            <label for="opcion1"
+                [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Los Urales', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Los Urales' && comprobarPressedZ2}">Los Urales</label>
+        </div>
+        <div class="opcion">
+            <input type="radio" id="opcion3" name="pregunta1" value="Los Andes" [disabled]="respuestaCorrectaZ2"
+                (change)="onOptionChange($event);">
+            <label for="opcion3"
+                [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Los ´', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Los Andes' && comprobarPressedZ2}">Los Andes</label>
+        </div>
+        <div class="opcion">
+            <input type="radio" id="opcion2" name="pregunta1" value="Los Cárpatos" [disabled]="respuestaCorrectaZ2"
+                (change)="onOptionChange($event);">
+            <label for="opcion2"
+                [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Los Cárpatos', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Los Cárpatos' && comprobarPressedZ2}">Los Cárpatos</label>
+        </div>
+    </div>
+    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ2">Comprobar</button>
+    <button (click)="goToZona2()" class="btnA">Zona 2</button>
+</div>
