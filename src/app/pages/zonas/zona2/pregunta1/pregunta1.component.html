@@ -1,1 +1,21 @@
-<p>pregunta1 works!</p>
+<div id="cont" class="container index animate__animated animate__fadeIn">
+    <h4>Primera pregunta</h4>
+    <h5>¿En qué playa te encuentras ahora mismo?</h5>
+    <div class="respuestas">
+      <div class="opcion">
+        <input type="radio" id="opcion1" name="pregunta1" value="Atxabiribil" [disabled]="respuestaCorrectaZ2" (change)="onOptionChange($event)">
+        <label for="opcion1" [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccion === 'Atxabiribil', 'incorrecta': respuestaIncorrectaZ2 && seleccion === 'Atxabiribil' && comprobarPressed}">Atxabiribil</label>
+      </div>
+      <div class="opcion">
+        <input type="radio" id="opcion2" name="pregunta1" value="Arrietara" [disabled]="respuestaCorrectaZ2" (change)="onOptionChange($event);">
+        <label for="opcion2" [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccion === 'Arrietara', 'incorrecta': respuestaIncorrectaZ2 && seleccion === 'Arrietara' && comprobarPressed}">Arrietara</label>
+      </div>
+      <div class="opcion">
+        <input type="radio" id="opcion3" name="pregunta1" value="Larrabasterra" [disabled]="respuestaCorrectaZ2" (change)="onOptionChange($event);">
+        <label for="opcion3" [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccion === 'Larrabasterra', 'incorrecta': respuestaIncorrectaZ2 && seleccion === 'Larrabasterra' && comprobarPressed}">Larrabasterra</label>
+      </div>
+    </div>
+    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ2">Comprobar</button>
+    <button (click)="goToZona2()" class="btnA" >Zona 2</button>
+  </div>
+  
