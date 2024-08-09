@@ -14,7 +14,7 @@ export class ContextComponent {
 
   goToPrueba1() {
     this.salida(() => {
-      this.router.navigate(['/prueba1']);
+      this.router.navigate(['/zonas']);
     });
   }
 
