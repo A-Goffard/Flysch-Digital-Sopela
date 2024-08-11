@@ -5,11 +5,12 @@ import { Zona2Component } from './zona2/zona2.component';
 import { Zona3Component } from './zona3/zona3.component';
 import { Zona4Component } from './zona4/zona4.component';
 import { Zona5Component } from './zona5/zona5.component';
+import { BackComponentComponent } from "../../shared/back-component/back-component.component";
 
 @Component({
   selector: 'app-zonas',
   standalone: true,
-  imports: [],
+  imports: [BackComponentComponent],
   templateUrl: './zonas.component.html',
   styleUrl: './zonas.component.css'
 })

@@ -1,0 +1,19 @@
+.goBack {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1.3rem;
+    left: 2rem;
+    z-index: 100;
+}
+
+.goBackimg {
+    width: 2rem;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.8s ease all;
+    background-color: transparent;
+    border: none;
+}
