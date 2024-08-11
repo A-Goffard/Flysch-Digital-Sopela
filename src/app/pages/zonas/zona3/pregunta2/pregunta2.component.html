@@ -1,1 +1,26 @@
-<p>pregunta2 works!</p>
+<div id="cont" class="container index animate__animated animate__fadeIn">
+    <h4>Primera pregunta</h4>
+    <h5>¿Pregunta x indeterminada?</h5>
+    <div class="respuestas">
+        <div class="opcion">
+            <input type="radio" id="opcion1" name="pregunta1" value="Respuesta1" [disabled]="respuestaCorrectaZ3"
+                (change)="onOptionChange($event)">
+            <label for="opcion1"
+                [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Respuesta1', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Respuesta1' && comprobarPressedZ3}">Respuesta1</label>
+        </div>
+        <div class="opcion">
+            <input type="radio" id="opcion3" name="pregunta1" value="Respuesta2" [disabled]="respuestaCorrectaZ3"
+                (change)="onOptionChange($event);">
+            <label for="opcion3"
+                [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Respuesta2', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Respuesta2' && comprobarPressedZ3}">Respuesta2</label>
+        </div>
+        <div class="opcion">
+            <input type="radio" id="opcion2" name="pregunta1" value="Respuesta3" [disabled]="respuestaCorrectaZ3"
+                (change)="onOptionChange($event);">
+            <label for="opcion2"
+                [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Respuesta3', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Respuesta3' && comprobarPressedZ3}">Respuesta3</label>
+        </div>
+    </div>
+    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ3">Comprobar</button>
+    <button (click)="goToZona3()" class="btnA">Zona 3</button>
+</div>
