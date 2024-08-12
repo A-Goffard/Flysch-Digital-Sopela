@@ -25,6 +25,7 @@ import { Pista1Component as Zona1Pregunta4Pista1Component } from './pages/zonas/
 import { Pista2Component as Zona1Pregunta4Pista2Component } from './pages/zonas/zona1/pregunta4/pista2/pista2.component';
 import { Pista1Component as Zona1Pregunta5Pista1Component } from './pages/zonas/zona1/pregunta5/pista1/pista1.component';
 import { Pista2Component as Zona1Pregunta5Pista2Component } from './pages/zonas/zona1/pregunta5/pista2/pista2.component';
+import { MasInfoComponent as Zona1MasInformacion } from './pages/zonas/zona1/mas-info/mas-info.component';
 
 import { Zona2Component } from './pages/zonas/zona2/zona2.component';
 import { Pregunta1Component as Zona2Pregunta1Component } from './pages/zonas/zona2/pregunta1/pregunta1.component';
@@ -44,6 +45,7 @@ import { Pista1Component as Zona2Pregunta4Pista1Component } from './pages/zonas/
 import { Pista2Component as Zona2Pregunta4Pista2Component } from './pages/zonas/zona2/pregunta4/pista2/pista2.component';
 import { Pista1Component as Zona2Pregunta5Pista1Component } from './pages/zonas/zona2/pregunta5/pista1/pista1.component';
 import { Pista2Component as Zona2Pregunta5Pista2Component } from './pages/zonas/zona2/pregunta5/pista2/pista2.component';
+import { MasInfoComponent as Zona2MasInformacion } from './pages/zonas/zona2/mas-info/mas-info.component';
 
 
 import { Zona3Component } from './pages/zonas/zona3/zona3.component';
@@ -64,6 +66,7 @@ import { Pista1Component as Zona3Pregunta4Pista1Component } from './pages/zonas/
 import { Pista2Component as Zona3Pregunta4Pista2Component } from './pages/zonas/zona3/pregunta4/pista2/pista2.component';
 import { Pista1Component as Zona3Pregunta5Pista1Component } from './pages/zonas/zona3/pregunta5/pista1/pista1.component';
 import { Pista2Component as Zona3Pregunta5Pista2Component } from './pages/zonas/zona3/pregunta5/pista2/pista2.component';
+import { MasInfoComponent as Zona3MasInformacion } from './pages/zonas/zona3/mas-info/mas-info.component';
 
 
 import { Zona4Component } from './pages/zonas/zona4/zona4.component';
@@ -84,6 +87,7 @@ import { Pista1Component as Zona4Pregunta4Pista1Component } from './pages/zonas/
 import { Pista2Component as Zona4Pregunta4Pista2Component } from './pages/zonas/zona4/pregunta4/pista2/pista2.component';
 import { Pista1Component as Zona4Pregunta5Pista1Component } from './pages/zonas/zona4/pregunta5/pista1/pista1.component';
 import { Pista2Component as Zona4Pregunta5Pista2Component } from './pages/zonas/zona4/pregunta5/pista2/pista2.component';
+import { MasInfoComponent as Zona4MasInformacion } from './pages/zonas/zona4/mas-info/mas-info.component';
 
 
 import { Zona5Component } from './pages/zonas/zona5/zona5.component';
@@ -104,6 +108,7 @@ import { Pista1Component as Zona5Pregunta4Pista1Component } from './pages/zonas/
 import { Pista2Component as Zona5Pregunta4Pista2Component } from './pages/zonas/zona5/pregunta4/pista2/pista2.component';
 import { Pista1Component as Zona5Pregunta5Pista1Component } from './pages/zonas/zona5/pregunta5/pista1/pista1.component';
 import { Pista2Component as Zona5Pregunta5Pista2Component } from './pages/zonas/zona5/pregunta5/pista2/pista2.component';
+import { MasInfoComponent as Zona5MasInformacion } from './pages/zonas/zona5/mas-info/mas-info.component';
 
 
 export const routes: Routes = [
@@ -133,6 +138,7 @@ export const routes: Routes = [
   { path: 'zona1/pregunta5/pista2', component: Zona1Pregunta5Pista2Component },
   { path: 'zona1/actividad', component: Zona1ActividadComponent },
   { path: 'zona1/exito', component: Zona1ExitoComponent },
+  { path: 'zona1/mas-info', component: Zona1MasInformacion },
 
   { path: 'zona2', component: Zona2Component },
   { path: 'zona2/pregunta1', component: Zona2Pregunta1Component },
@@ -152,6 +158,8 @@ export const routes: Routes = [
   { path: 'zona2/pregunta5/pista2', component: Zona2Pregunta5Pista2Component },
   { path: 'zona2/actividad', component: Zona2ActividadComponent },
   { path: 'zona2/exito', component: Zona2ExitoComponent },
+  { path: 'zona2/mas-info', component: Zona2MasInformacion },
+
 
   { path: 'zona3', component: Zona3Component },
   { path: 'zona3/pregunta1', component: Zona3Pregunta1Component },
@@ -171,6 +179,8 @@ export const routes: Routes = [
   { path: 'zona3/pregunta5/pista2', component: Zona3Pregunta5Pista2Component },
   { path: 'zona3/actividad', component: Zona3ActividadComponent },
   { path: 'zona3/exito', component: Zona3ExitoComponent },
+  { path: 'zona3/mas-info', component: Zona3MasInformacion },
+
 
   { path: 'zona4', component: Zona4Component },
   { path: 'zona4/pregunta1', component: Zona4Pregunta1Component },
@@ -190,6 +200,8 @@ export const routes: Routes = [
   { path: 'zona4/pregunta5/pista2', component: Zona4Pregunta5Pista2Component },
   { path: 'zona4/actividad', component: Zona4ActividadComponent },
   { path: 'zona4/exito', component: Zona4ExitoComponent },
+  { path: 'zona4/mas-info', component: Zona4MasInformacion },
+
 
   { path: 'zona5', component: Zona5Component },
   { path: 'zona5/pregunta1', component: Zona5Pregunta1Component },
@@ -209,4 +221,6 @@ export const routes: Routes = [
   { path: 'zona5/pregunta5/pista2', component: Zona5Pregunta5Pista2Component },
   { path: 'zona5/actividad', component: Zona5ActividadComponent },
   { path: 'zona5/exito', component: Zona5ExitoComponent },
+  { path: 'zona5/mas-info', component: Zona5MasInformacion },
+
 ];
