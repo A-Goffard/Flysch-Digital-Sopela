@@ -13,7 +13,11 @@ import { Pregunta2Component as Zona1Pregunta2Component } from './pages/zonas/zon
 import { Pregunta3Component as Zona1Pregunta3Component } from './pages/zonas/zona1/pregunta3/pregunta3.component';
 import { Pregunta4Component as Zona1Pregunta4Component } from './pages/zonas/zona1/pregunta4/pregunta4.component';
 import { Pregunta5Component as Zona1Pregunta5Component } from './pages/zonas/zona1/pregunta5/pregunta5.component';
-import { ActividadComponent as Zona1ActividadComponent } from './pages/zonas/zona1/actividad/actividad.component';
+import { Actividad1Component as Zona1Actividad1Component } from './pages/zonas/zona1/actividades/actividad1/actividad1.component';
+import { Actividad2Component as Zona1Actividad2Component } from './pages/zonas/zona1/actividades/actividad2/actividad2.component';
+import { Actividad3Component as Zona1Actividad3Component } from './pages/zonas/zona1/actividades/actividad3/actividad3.component';
+import { Actividad4Component as Zona1Actividad4Component } from './pages/zonas/zona1/actividades/actividad4/actividad4.component';
+import { Actividad5Component as Zona1Actividad5Component } from './pages/zonas/zona1/actividades/actividad5/actividad5.component';
 import { ExitoComponent as Zona1ExitoComponent } from './pages/zonas/zona1/exito/exito.component';
 import { Pista1Component as Zona1Pregunta1Pista1Component } from './pages/zonas/zona1/pregunta1/pista1/pista1.component';
 import { Pista2Component as Zona1Pregunta1Pista2Component } from './pages/zonas/zona1/pregunta1/pista2/pista2.component';
@@ -136,7 +140,11 @@ export const routes: Routes = [
   { path: 'zona1/pregunta5', component: Zona1Pregunta5Component },
   { path: 'zona1/pregunta5/pista1', component: Zona1Pregunta5Pista1Component },
   { path: 'zona1/pregunta5/pista2', component: Zona1Pregunta5Pista2Component },
-  { path: 'zona1/actividad', component: Zona1ActividadComponent },
+  { path: 'zona1/actividades/actividad1', component: Zona1Actividad1Component },
+  { path: 'zona1/actividades/actividad2', component: Zona1Actividad2Component },
+  { path: 'zona1/actividades/actividad3', component: Zona1Actividad3Component },
+  { path: 'zona1/actividades/actividad4', component: Zona1Actividad4Component },
+  { path: 'zona1/actividades/actividad5', component: Zona1Actividad5Component },
   { path: 'zona1/exito', component: Zona1ExitoComponent },
   { path: 'zona1/mas-info', component: Zona1MasInformacion },
 

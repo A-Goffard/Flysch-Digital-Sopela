@@ -63,11 +63,11 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
       '/zona1/pregunta3',
       '/zona1/pregunta4',
       '/zona1/pregunta5',
-      '/zona1/actividad1',
-      '/zona1/actividad2',
-      '/zona1/actividad3',
-      '/zona1/actividad4',
-      '/zona1/actividad5'
+      '/zona1/actividades/actividad1',
+      '/zona1/actividades/actividad2',
+      '/zona1/actividades/actividad3',
+      '/zona1/actividades/actividad4',
+      '/zona1/actividades/actividad5'
     ];
 
     this.allCompleted = requiredRoutes.every(route => this.isAnsweredCorrectly(route));
