@@ -58,8 +58,7 @@ export class Pregunta5Component implements OnInit {
   
 
   goToZona1() {
-    console.log('Navigating to Zona 1');
-    this.router.navigate(['/zona1']);
+    this.router.navigate(['/zona1/pregunta5/explicacion5']);
   }
   
   ngOnInit() {

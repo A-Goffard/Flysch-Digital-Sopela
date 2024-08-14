@@ -58,7 +58,7 @@ export class Pregunta4Component implements OnInit {
   
 
   goToZona1() {
-    this.router.navigate(['/zona1']);
+    this.router.navigate(['/zona1/pregunta4/explicacion4']);
   }
 
   ngOnInit() {
