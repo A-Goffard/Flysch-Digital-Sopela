@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
+import { BackComponentComponent } from "../../../../../shared/back-component/back-component.component";
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-actividad4',
+  selector: 'app-zona1-actividad4',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, BackComponentComponent],
   templateUrl: './actividad4.component.html',
   styleUrl: './actividad4.component.css'
 })
 export class Actividad4Component {
+  constructor(private router: Router) {}
 
+  hecho() {
+    this.router.navigate(['/zona1/actividades/actividad4/hecho']);
+  }
+
+  fallo() {
+    this.router.navigate(['/zona1/actividades/actividad4/fallo']);
+  }
 }
