@@ -28,7 +28,7 @@ header nav .mariposita {
     display: flex;
     align-items: center;
     position: fixed;
-    top: 2rem;
+    bottom: 2rem;
     left: 2rem;
     z-index: 100;
 }

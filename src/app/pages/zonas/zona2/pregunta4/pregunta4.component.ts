@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { BackComponentComponent } from "../../../../shared/back-component/back-component.component";
 
 @Component({
   selector: 'app-zona2-pregunta4',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, BackComponentComponent],
   templateUrl: './pregunta4.component.html',
   styleUrl: './pregunta4.component.css'
 })
@@ -30,7 +31,7 @@ export class Pregunta4Component implements OnInit {
       localStorage.setItem('respuestaCorrectaZ2Pregunta4', 'true');
   
       setTimeout(() => {
-        this.router.navigate(['/zona2/pregunta5']);
+        this.router.navigate(['/zona2/pregunta4/explicacion4']);
       }, 2000);
     } else {
       this.respuestaCorrectaZ2 = false;

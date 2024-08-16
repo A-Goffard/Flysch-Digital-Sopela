@@ -1,0 +1,24 @@
+<div id="cont" class="container index animate__animated animate__fadeIn">
+    <h3>Preguntas</h3>
+    <div class="cont-marcadores">
+        <div class="marcadores" routerLink="pregunta1" [ngClass]="{'current': isCurrentRoute('pregunta1'), 'green': isAnsweredCorrectly('/zona5/pregunta1')}">1</div>
+        <div class="marcadores" routerLink="pregunta2" [ngClass]="{'current': isCurrentRoute('pregunta2'), 'green': isAnsweredCorrectly('/zona5/pregunta2')}">2</div>
+        <div class="marcadores" routerLink="pregunta3" [ngClass]="{'current': isCurrentRoute('pregunta3'), 'green': isAnsweredCorrectly('/zona5/pregunta3')}">3</div>
+        <div class="marcadores" routerLink="pregunta4" [ngClass]="{'current': isCurrentRoute('pregunta4'), 'green': isAnsweredCorrectly('/zona5/pregunta4')}">4</div>
+        <div class="marcadores" routerLink="pregunta5" [ngClass]="{'current': isCurrentRoute('pregunta5'), 'green': isAnsweredCorrectly('/zona5/pregunta5')}">5</div>
+    </div>
+
+    <h3>Actividades</h3>
+    <div class="cont-marcadores">
+        <div class="marcadores" routerLink="actividades/actividad1" [ngClass]="{'current': isCurrentRoute('actividad1'), 'green': isAnsweredCorrectly('/zona5/actividades/actividad1')}">1</div>
+        <div class="marcadores" routerLink="actividades/actividad2" [ngClass]="{'current': isCurrentRoute('actividad2'), 'green': isAnsweredCorrectly('/zona5/actividades/actividad2')}">2</div>
+        <div class="marcadores" routerLink="actividades/actividad3" [ngClass]="{'current': isCurrentRoute('actividad3'), 'green': isAnsweredCorrectly('/zona5/actividades/actividad3')}">3</div>
+        <div class="marcadores" routerLink="actividades/actividad4" [ngClass]="{'current': isCurrentRoute('actividad4'), 'green': isAnsweredCorrectly('/zona5/actividades/actividad4')}">4</div>
+        <div class="marcadores" routerLink="actividades/actividad5" [ngClass]="{'current': isCurrentRoute('actividad5'), 'green': isAnsweredCorrectly('/zona5/actividades/actividad5')}">5</div>
+    </div>
+
+    <!-- Botón + Info oculto hasta que se completen todas las preguntas y actividades -->
+    <div *ngIf="allCompleted">
+        <button class="btnA" (click)="masInfo()">+ Info</button>
+    </div>
+</div>

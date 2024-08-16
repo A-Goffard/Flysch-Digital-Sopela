@@ -12,6 +12,7 @@ import { RouterModule, Router } from '@angular/router';
 export class MarcadoresComponent implements AfterViewInit, OnInit {
   currentRoute: string = '';
   respuestasCorrectas: { [key: string]: boolean } = {};
+  allCompleted: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -21,6 +22,7 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
     if (respuestasGuardadas) {
       this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
     }
+    this.checkAllCompleted(); // Comprobamos si todas las preguntas y actividades están completadas
   }
 
   ngAfterViewInit() {
@@ -54,20 +56,24 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
     return respuestasCorrectas[route] === true;
   }
 
-  goToPregunta1() {
-    this.router.navigate(['/zona1/pregunta1']);
+  checkAllCompleted() {
+    const requiredRoutes = [
+      '/zona1/pregunta1',
+      '/zona1/pregunta2',
+      '/zona1/pregunta3',
+      '/zona1/pregunta4',
+      '/zona1/pregunta5',
+      '/zona1/actividades/actividad1',
+      '/zona1/actividades/actividad2',
+      '/zona1/actividades/actividad3',
+      '/zona1/actividades/actividad4',
+      '/zona1/actividades/actividad5'
+    ];
+
+    this.allCompleted = requiredRoutes.every(route => this.isAnsweredCorrectly(route));
   }
 
-  goToPregunta2() {
-    this.router.navigate(['/zona1/pregunta1']);
-  }
-  goToPregunta3() {
-    this.router.navigate(['/zona1/pregunta1']);
-  }
-  goToPregunta4() {
-    this.router.navigate(['/zona1/pregunta1']);
-  }
-  goToPregunta5() {
-    this.router.navigate(['/zona1/pregunta1']);
+  masInfo() {
+    this.router.navigate(['/zona1/mas-info']); // Navega a la página de explicaciones
   }
 }

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { BackComponentComponent } from "../../../../shared/back-component/back-component.component";
 
 @Component({
   selector: 'app-zona3-pregunta1',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, BackComponentComponent],
   templateUrl: './pregunta1.component.html',
   styleUrl: './pregunta1.component.css'
 })
@@ -21,7 +22,7 @@ export class Pregunta1Component implements OnInit {
   comprobar() {
     this.comprobarPressedZ3 = true;
   
-    if (this.seleccionZ3 === 'Roja') {
+    if (this.seleccionZ3 === 'XXXrespuestacorrecta') {
       this.respuestaCorrectaZ3 = true;
       this.respuestaIncorrectaZ3 = false;
       this.respuestasCorrectasZ3['/zona3/pregunta1'] = true;
@@ -30,7 +31,7 @@ export class Pregunta1Component implements OnInit {
       localStorage.setItem('respuestaCorrectaZ3Pregunta1', 'true');
   
       setTimeout(() => {
-        this.router.navigate(['/zona3/pregunta2']);
+        this.router.navigate(['/zona3/pregunta1/explicacion1']);
       }, 2000);
     } else {
       this.respuestaCorrectaZ3 = false;
@@ -40,7 +41,7 @@ export class Pregunta1Component implements OnInit {
       // Almacenar estado específico de la pregunta 1
       localStorage.setItem('respuestaCorrectaZ3Pregunta1', 'false');
   
-      if (this.seleccionZ3 === 'Blanca') {
+      if (this.seleccionZ3 === 'xxxrespuestaerronea') {
         setTimeout(() => {
           this.router.navigate(['/zona3/pregunta1/pista1']);
         }, 2000);

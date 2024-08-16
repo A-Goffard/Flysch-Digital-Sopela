@@ -10,17 +10,19 @@ import { RouterModule, Router } from '@angular/router';
   styleUrls: ['./marcadores.component.css']
 })
 export class MarcadoresComponent implements AfterViewInit, OnInit {
-  currentRouteZ2: string = '';
-  respuestasCorrectasZ2: { [key: string]: boolean } = {};
+  currentRoute: string = '';
+  respuestasCorrectas: { [key: string]: boolean } = {};
+  allCompleted: boolean = false;
 
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.currentRouteZ2 = this.router.url;
-    const respuestasGuardadasZ2 = localStorage.getItem('respuestasCorrectasZ2');
-    if (respuestasGuardadasZ2) {
-      this.respuestasCorrectasZ2 = JSON.parse(respuestasGuardadasZ2);
+    this.currentRoute = this.router.url;
+    const respuestasGuardadas = localStorage.getItem('respuestasCorrectas');
+    if (respuestasGuardadas) {
+      this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
     }
+    this.checkAllCompleted(); // Comprobamos si todas las preguntas y actividades están completadas
   }
 
   ngAfterViewInit() {
@@ -45,29 +47,33 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
     }
   }
 
-  isCurrentRouteZ2(route: string): boolean {
+  isCurrentRoute(route: string): boolean {
     return this.router.url.includes(route);
   }
 
-  isAnsweredCorrectlyZ2(route: string): boolean {
-    const respuestasCorrectasZ2 = JSON.parse(localStorage.getItem('respuestasCorrectasZ2') || '{}');
-    return respuestasCorrectasZ2[route] === true;
+  isAnsweredCorrectly(route: string): boolean {
+    const respuestasCorrectas = JSON.parse(localStorage.getItem('respuestasCorrectas') || '{}');
+    return respuestasCorrectas[route] === true;
   }
 
-  goToPregunta1() {
-    this.router.navigate(['/zona2/pregunta1']);
+  checkAllCompleted() {
+    const requiredRoutes = [
+      '/zona2/pregunta1',
+      '/zona2/pregunta2',
+      '/zona2/pregunta3',
+      '/zona2/pregunta4',
+      '/zona2/pregunta5',
+      '/zona2/actividades/actividad1',
+      '/zona2/actividades/actividad2',
+      '/zona2/actividades/actividad3',
+      '/zona2/actividades/actividad4',
+      '/zona2/actividades/actividad5'
+    ];
+
+    this.allCompleted = requiredRoutes.every(route => this.isAnsweredCorrectly(route));
   }
 
-  goToPregunta2() {
-    this.router.navigate(['/zona2/pregunta2']);
-  }
-  goToPregunta3() {
-    this.router.navigate(['/zona2/pregunta3']);
-  }
-  goToPregunta4() {
-    this.router.navigate(['/zona2/pregunta4']);
-  }
-  goToPregunta5() {
-    this.router.navigate(['/zona2/pregunta5']);
+  masInfo() {
+    this.router.navigate(['/zona2/mas-info']); // Navega a la página de explicaciones
   }
 }

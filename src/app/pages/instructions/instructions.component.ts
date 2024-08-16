@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { BackComponentComponent } from "../../shared/back-component/back-component.component";
 
 @Component({
   selector: 'app-instructions',
   standalone: true,
-  imports: [],
+  imports: [BackComponentComponent],
   templateUrl: './instructions.component.html',
   styleUrl: './instructions.component.css'
 })

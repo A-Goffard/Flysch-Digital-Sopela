@@ -12,7 +12,13 @@
     height: 2rem;
     margin: 1rem;
     transform: scale(1);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.25rem; 
+    line-height: 1; 
 }
 
 .marcadores.animate {
@@ -21,4 +27,8 @@
 
 .green {
     background-color: var(--ligthgreen);
+    color: var(--white);
+    font-weight: bolder;
 }
+
+

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { BackComponentComponent } from "../../../../shared/back-component/back-component.component";
 
 @Component({
   selector: 'app-zona1-pregunta2',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, BackComponentComponent],
   templateUrl: './pregunta2.component.html',
   styleUrl: './pregunta2.component.css'
 })
@@ -58,7 +59,7 @@ export class Pregunta2Component implements OnInit {
   
 
   goToZona1() {
-    this.router.navigate(['/zona1']);
+    this.router.navigate(['/zona1/pregunta2/explicacion2']);
   }
 
   ngOnInit() {
