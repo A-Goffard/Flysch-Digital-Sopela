@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-explicacion3',
+  selector: 'app-zona5-explicacion3',
   standalone: true,
-  imports: [],
+  imports: [ CommonModule ],
   templateUrl: './explicacion3.component.html',
   styleUrl: './explicacion3.component.css'
 })
 export class Explicacion3Component {
+  constructor(private router: Router) {}
 
+  volver() {
+    this.router.navigate(['/zona5/pregunta4']);
+  }
 }

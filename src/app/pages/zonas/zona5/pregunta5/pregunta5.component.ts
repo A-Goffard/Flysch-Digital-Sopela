@@ -32,7 +32,7 @@ export class Pregunta5Component implements OnInit {
       localStorage.setItem('respuestaCorrectaZ5Pregunta5', 'true');
   
       setTimeout(() => {
-        this.router.navigate(['/zonas']);
+        this.router.navigate(['/zonas5/pregunta5/explicacion5']);
       }, 2000);
     } else {
       this.respuestaCorrectaZ5 = false;
