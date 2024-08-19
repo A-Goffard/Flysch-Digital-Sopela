@@ -14,6 +14,10 @@ export class Actividad2Component {
   constructor(private router: Router) {}
 
   hecho() {
+    const respuestasCorrectas = JSON.parse(localStorage.getItem('respuestasCorrectas') || '{}');
+    respuestasCorrectas['/zona3/actividades/actividad2'] = true;
+    localStorage.setItem('respuestasCorrectas', JSON.stringify(respuestasCorrectas));
+
     this.router.navigate(['/zona3/actividades/actividad2/hecho']);
   }
 

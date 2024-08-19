@@ -8,12 +8,16 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, BackComponentComponent],
   templateUrl: './actividad2.component.html',
-  styleUrl: './actividad2.component.css'
+  styleUrls: ['./actividad2.component.css']
 })
 export class Actividad2Component {
   constructor(private router: Router) {}
 
   hecho() {
+    const respuestasCorrectas = JSON.parse(localStorage.getItem('respuestasCorrectas') || '{}');
+    respuestasCorrectas['/zona1/actividades/actividad2'] = true;
+    localStorage.setItem('respuestasCorrectas', JSON.stringify(respuestasCorrectas));
+
     this.router.navigate(['/zona1/actividades/actividad2/hecho']);
   }
 
