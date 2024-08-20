@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { BackComponentComponent } from "../../../../../../shared/back-component/back-component.component";
 
 @Component({
   selector: 'app-zona3-actividad1-fallo1',
   standalone: true,
-  imports: [],
+  imports: [BackComponentComponent],
   templateUrl: './fallo.component.html',
   styleUrl: './fallo.component.css'
 })
