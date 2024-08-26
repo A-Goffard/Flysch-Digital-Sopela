@@ -1,2 +1,4 @@
-<shared-nav-header></shared-nav-header>
-<router-outlet></router-outlet>
+<div [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}" class="background-container">
+    <shared-nav-header></shared-nav-header>
+    <router-outlet></router-outlet>
+</div>
