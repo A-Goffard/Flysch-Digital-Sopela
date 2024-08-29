@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-explicacion2',
+  selector: 'app-zona1-explicacion2',
   standalone: true,
   imports: [ CommonModule ],
   templateUrl: './explicacion2.component.html',

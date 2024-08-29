@@ -62,6 +62,10 @@ export class Pregunta3Component implements OnInit {
     this.router.navigate(['/zona3']);
   }
   
+  goToExplicacion() {
+    this.router.navigate(['/zona3/pregunta3/explicacion3']);
+  }
+
   ngOnInit() {
     const respuestasGuardadasZ3 = localStorage.getItem('respuestasCorrectasZ3');
     if (respuestasGuardadasZ3) {

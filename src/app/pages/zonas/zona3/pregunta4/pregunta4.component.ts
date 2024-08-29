@@ -56,10 +56,13 @@ export class Pregunta4Component implements OnInit {
     localStorage.setItem('respuestasCorrectasZ3', JSON.stringify(this.respuestasCorrectasZ3));
     localStorage.setItem('seleccionZ3Pregunta4', this.seleccionZ3);
   }
-  
 
   goToZona3() {
     this.router.navigate(['/zona3']);
+  }
+
+  goToExplicacion() {
+    this.router.navigate(['/zona3/pregunta3/explicacion3']);
   }
   
   ngOnInit() {

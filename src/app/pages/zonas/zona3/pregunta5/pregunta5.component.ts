@@ -32,7 +32,7 @@ export class Pregunta5Component implements OnInit {
       localStorage.setItem('respuestaCorrectaZ3Pregunta5', 'true');
   
       setTimeout(() => {
-        this.router.navigate(['/zonas/pregunta5/explicacion5']);
+        this.router.navigate(['/zona3/pregunta5/explicacion5']);
       }, 2000);
     } else {
       this.respuestaCorrectaZ3 = false;
@@ -56,10 +56,13 @@ export class Pregunta5Component implements OnInit {
     localStorage.setItem('respuestasCorrectasZ3', JSON.stringify(this.respuestasCorrectasZ3));
     localStorage.setItem('seleccionZ3Pregunta5', this.seleccionZ3);
   }
-  
 
   goToZona3() {
     this.router.navigate(['/zona3']);
+  }
+
+  goToExplicacion() {
+    this.router.navigate(['/zona3/pregunta5/explicacion5']);
   }
   
   ngOnInit() {

@@ -61,6 +61,10 @@ export class Pregunta5Component implements OnInit {
   goToZona4() {
     this.router.navigate(['/zona4']);
   }
+
+  goToExplicacion() {
+    this.router.navigate(['/zona4/pregunta5/explicacion5']);
+  }
   
   ngOnInit() {
     const respuestasGuardadasZ4 = localStorage.getItem('respuestasCorrectasZ4');
