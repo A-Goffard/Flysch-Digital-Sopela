@@ -1,13 +1,18 @@
 {
   "name": "flysch-digital",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
+"scripts": {
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build",
+  "build:href": "ng build --base-href ./",
+  "delete:docs": "rimraf docs",
+  "copy:dist": "cpx \"dist/flysch-digital/browser/**/*\" ./docs",
+  "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test"
+}
+,
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.1.0",
@@ -28,12 +33,15 @@
     "@angular/cli": "^18.1.1",
     "@angular/compiler-cli": "^18.1.0",
     "@types/jasmine": "~5.1.0",
+    "copyfiles": "^2.4.1",
+    "cpx": "^1.5.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "rimraf": "^6.0.1",
     "typescript": "~5.5.2"
   }
 }
