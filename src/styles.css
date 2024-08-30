@@ -85,6 +85,7 @@ h6 {
 p {
     margin: 1rem;
     font-size: 1.8rem;
+    font-weight: bold;
 }
 
 img {
@@ -140,35 +141,26 @@ img {
     margin: 1rem;
 }
 
-/* Estilos generales para dispositivos móviles */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.background-container {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Alinea al inicio */
-    align-items: center;
-    min-height: 100vh; /* Asegura que al menos ocupe toda la pantalla */
-}
-
 .centre {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+    
+} 
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+    background-repeat: no-repeat;
 }
 
 /* Media query para pantallas grandes */

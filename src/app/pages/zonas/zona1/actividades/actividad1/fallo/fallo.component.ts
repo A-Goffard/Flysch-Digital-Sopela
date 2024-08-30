@@ -1,16 +1,29 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { BackComponentComponent } from "../../../../../../shared/back-component/back-component.component";
-
+import { BackgroundService } from '../../../../../../services/background.service';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-zona1-actividad1-fallo1',
   standalone: true,
-  imports: [BackComponentComponent],
+  imports: [BackComponentComponent, CommonModule],
   templateUrl: './fallo.component.html',
-  styleUrl: './fallo.component.css'
+  styleUrls: ['./fallo.component.css']
 })
-export class FalloComponent {
-  constructor(private router: Router) {}
+export class FalloComponent implements OnInit {
+  backgroundImage: string = '';
+
+  constructor(private router: Router, private backgroundService: BackgroundService) {}
+
+  ngOnInit() {
+    this.setRandomBackground();
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.setRandomBackground();
+      }
+    });
+  }
 
   volverIntentar() {
     this.router.navigate(['/zona1/actividades/actividad1']);
@@ -18,5 +31,9 @@ export class FalloComponent {
 
   siguiente() {
     this.router.navigate(['/zona1/actividades/actividad2']);
+  }
+
+  setRandomBackground() {
+    this.backgroundImage = this.backgroundService.getRandomImage();
   }
 }
