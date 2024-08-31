@@ -21,6 +21,6 @@ export class IntroComponent implements OnInit {
         cont.classList.add('animate__fadeOut');
       }
 
-    }, 7000); // 7000ms = 7 segundos
+    }, 5000); // 7000ms = 7 segundos
   }
 }
