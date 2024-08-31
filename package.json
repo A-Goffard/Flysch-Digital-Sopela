@@ -7,10 +7,11 @@
   "build": "ng build",
   "build:href": "ng build --base-href ./",
   "delete:docs": "rimraf docs",
+  "redirects:dist": "cpx \"redirects/**/*\" ./docs",
   "copy:dist": "cpx \"dist/flysch-digital/browser/**/*\" ./docs",
-  "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
+  "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist && redirects:dist",
   "watch": "ng build --watch --configuration development",
-  "test": "ng test"
+  "test": "ng test" 
 }
 ,
   "private": true,
