@@ -21,10 +21,6 @@
     --linkgreen: #2b3d23;
 }
 
-.container {
-    margin-top: 5rem;
-}
-
 .logo {
     max-width: 22.5rem;
 }
@@ -43,7 +39,7 @@ body {
 
 h1 {
     margin: 1.5rem;
-    font-size: 3rem;
+    font-size: 2.7rem;
     color: var(--darkgreen);
     display: flex;
     justify-content: center;
@@ -62,29 +58,29 @@ h2 {
 
 h3 {
     margin: 1rem;
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 h4 {
     margin: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 
 h5 {
     margin: 1rem;
-    font-size: 1.75rem;
+    font-size: 1.4rem;
 }
 
 
 h6 {
     margin: 1rem;
-    font-size: 1.5;
+    font-size: 1.2;
 }
 
 p {
     margin: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -99,7 +95,7 @@ img {
 }
 
 .btnA {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem;
     padding: 1rem 2rem;
     border-radius: 0.7rem;
@@ -110,7 +106,7 @@ img {
 }
 
 .btnB {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem;
     padding: 1rem 2rem;
     border-radius: 0.7rem;
@@ -130,7 +126,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2rem;
+    margin: 3rem;
 }
 
 .index {
