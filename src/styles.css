@@ -166,7 +166,7 @@ img {
     }
 
     body::before {
-        content: "Esta aplicación solo está disponible en dispositivos móviles.";
+        content: "Esta aplicación solo está disponible en dispositivos móviles en vertical.";
         display: flex;
         justify-content: center;
         align-items: flex-start;
