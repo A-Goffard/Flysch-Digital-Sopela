@@ -31,7 +31,11 @@ export class HomeComponent {
     });
   }
 
-
+  goToContact() {
+    this.salida(() => {
+      this.router.navigate(['/contact']);
+    });
+  }
 
   salida(callback: () => void) {
     const cont = document.getElementById('cont');

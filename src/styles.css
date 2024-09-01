@@ -122,19 +122,11 @@ img {
 }
 
 .container {
-    display: flex;
+/*     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin: 3rem;
-}
-
-.index {
-    text-align: center;
-}
-
-.input-repuestas {
-    margin: 1rem;
 }
 
 .centre {
@@ -145,8 +137,16 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 } 
+
+.index {
+    text-align: center;
+}
+
+.input-repuestas {
+    margin: 1rem;
+}
+
 .background-container {
     position: fixed;
     top: 0;
