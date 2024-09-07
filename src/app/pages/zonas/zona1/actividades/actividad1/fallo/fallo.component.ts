@@ -10,30 +10,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './fallo.component.html',
   styleUrls: ['./fallo.component.css']
 })
-export class FalloComponent implements OnInit {
-  backgroundImage: string = '';
-
-  constructor(private router: Router, private backgroundService: BackgroundService) {}
-
-  ngOnInit() {
-    this.setRandomBackground();
-
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        this.setRandomBackground();
-      }
-    });
-  }
+export class FalloComponent{
+  constructor(private router: Router) {}
 
   volverIntentar() {
-    this.router.navigate(['/zona1/actividades/actividad1']);
-  }
-
-  siguiente() {
     this.router.navigate(['/zona1/actividades/actividad2']);
   }
 
-  setRandomBackground() {
-    this.backgroundImage = this.backgroundService.getRandomImage();
+  siguiente() {
+    this.router.navigate(['/zona1/actividades/actividad3']);
   }
 }
