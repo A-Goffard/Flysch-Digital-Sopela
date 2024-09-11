@@ -1,6 +1,9 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
-  <app-back-component></app-back-component>
-    <h4>Segunda pregunta</h4>
+<!--   <app-back-component></app-back-component>
+ -->    <h4>Segunda pregunta</h4>
+    <p>Ya sabemos dónde nos encontramos</p>
+    <p>Ahora necesitamos saber cúando.</p>
+    <p>Veamos si las rocas que tenemos a nuestro alrededor nos dan pistas.</p>
     <h5>Busca una pared roja bajo la cuesta de entrada</h5> 
     <h5>¿De qué material están compuestos estos sedimentos tan rojos?</h5>
     <div class="respuestas">
@@ -18,7 +21,7 @@
       </div>
     </div>
     <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-    <button (click)="goToZona1()" class="btnA" >Zona 1</button>
+<!--     <button (click)="goToZona1()" class="btnA" >Zona 1</button> -->
     <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
 
   </div>

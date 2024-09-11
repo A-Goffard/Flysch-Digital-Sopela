@@ -1,4 +1,9 @@
 .logo-contacto {
-    max-width: 7rem;
+    max-width: 5rem;
     margin: 1rem;
+}
+
+.contacto{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }

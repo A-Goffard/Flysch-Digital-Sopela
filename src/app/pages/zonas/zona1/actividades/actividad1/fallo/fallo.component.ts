@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { BackComponentComponent } from "../../../../../../shared/back-component/back-component.component";
-import { BackgroundService } from '../../../../../../services/background.service';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-zona1-actividad1-fallo1',

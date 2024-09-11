@@ -127,7 +127,9 @@ img {
     justify-content: center;
     align-items: center; */
     margin: 3rem;
+/*     padding: 2rem; */
 }
+
 
 .centre {
     margin: 0;
@@ -147,7 +149,7 @@ img {
     margin: 1rem;
 }
 
-.background-container {
+/* .background-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -157,13 +159,13 @@ img {
     background-position: center;
     z-index: -1; 
     background-repeat: no-repeat;
-}
+} */
 
 /* Media query para pantallas grandes */
 @media (min-width: 769px) {
-    .background-container {
+/*     .background-container {
         display: none;
-    }
+    } */
 
     body::before {
         content: "Esta aplicación solo está disponible en dispositivos móviles en vertical.";

@@ -1,6 +1,9 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
-    <app-back-component></app-back-component>
-    <h4>Siguiente pregunta</h4>
+<!--     <app-back-component></app-back-component>
+ -->    <h4>Siguiente pregunta</h4>
+     <p>Vamos a ver si descubrimos el cuándo.</p>
+     <p>Ya sabemos algo más sobre la roca que tenemos delante.</p>
+     <p>Si descubrimos la edad de esta roca, sabremos cuantos millones de años hemos viajado al pasado.</p>
     <h5>¿Cuántos millones de años (Ma) tiene la roca roja que parece tener venas o raices blancas?</h5>
     <div class="respuestas">
         <div class="opcion">
@@ -26,7 +29,7 @@
         </div>
     </div>
     <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-    <button (click)="goToZona1()" class="btnA" >Zona 1</button>
-    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA">Explicación</button>
+<!--     <button (click)="goToZona1()" class="btnA" >Zona 1</button>
+ -->    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA">Explicación</button>
 
 </div>

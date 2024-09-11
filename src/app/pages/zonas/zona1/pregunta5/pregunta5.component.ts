@@ -22,7 +22,7 @@ export class Pregunta5Component implements OnInit {
   comprobar() {
     this.comprobarPressed = true;
   
-    if (this.seleccion === 'Sedimentaria') {
+    if (this.seleccion === 'Unos 70 Ma') {
       this.respuestaCorrecta = true;
       this.respuestaIncorrecta = false;
       this.respuestasCorrectas['/zona1/pregunta5'] = true;
@@ -41,7 +41,7 @@ export class Pregunta5Component implements OnInit {
       // Almacenar estado específico de la pregunta 1
       localStorage.setItem('respuestaCorrectaPregunta5', 'false');
   
-      if (this.seleccion === 'Metamórfica') {
+      if (this.seleccion === 'Más de 200 Ma') {
         setTimeout(() => {
           this.router.navigate(['/zona1/pregunta5/pista1']);
         }, 2000);
