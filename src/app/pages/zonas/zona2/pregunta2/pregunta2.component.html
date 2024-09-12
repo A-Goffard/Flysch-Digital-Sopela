@@ -1,6 +1,8 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
-    <app-back-component></app-back-component>
-    <h4>Primera pregunta</h4>
+<!--     <app-back-component></app-back-component>
+ -->    <h4>Primera pregunta</h4>
+    <p>Vamos a intentar ordenar lo que vemos en el tiempo.</p>
+    <p>Puede que nos ayude a descubrir la causa de la brecha.</p>
     <h5>¿Qué se ha formado primero?</h5>
     <div class="respuestas">
         <div class="opcion">
@@ -23,6 +25,6 @@
         </div>
     </div>
     <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ2">Comprobar</button>
-    <button (click)="goToZona2()" class="btnA">Zona 2</button>
-    <button *ngIf="respuestaCorrectaZ2" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+<!--     <button (click)="goToZona2()" class="btnA">Zona 2</button>
+ -->    <button *ngIf="respuestaCorrectaZ2" (click)="goToExplicacion()" class="btnA" >Explicación</button>
 </div>
