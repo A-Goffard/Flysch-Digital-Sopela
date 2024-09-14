@@ -1,25 +1,27 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div class="margen">
         <h4>Segunda pregunta</h4>
-        <h5>¿Pregunta x indeterminada?</h5>
+        <p>¿Te has fijado que los estratos de esta zona ya no son como los de antes?</p>
+        <p>Algo ha cambiado...</p>
+        <h5>¿Cuantos tipos de roca se interccalan en esta zona de la playa?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="Respuesta1" [disabled]="respuestaCorrectaZ5"
+                <input type="radio" id="opcion1" name="pregunta1" value="Calizas y margas" [disabled]="respuestaCorrectaZ5"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Respuesta1', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Respuesta1' && comprobarPressedZ5}">Respuesta1</label>
+                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Calizas y margas', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Calizas y margas' && comprobarPressedZ5}">Calizas y margas</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="Respuesta2" [disabled]="respuestaCorrectaZ5"
+                <input type="radio" id="opcion3" name="pregunta1" value="Calizas, margas y areniscas" [disabled]="respuestaCorrectaZ5"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Respuesta2', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Respuesta2' && comprobarPressedZ5}">Respuesta2</label>
+                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Calizas, margas y areniscas', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Calizas, margas y areniscas' && comprobarPressedZ5}">Calizas, margas y areniscas</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="Respuesta3" [disabled]="respuestaCorrectaZ5"
+                <input type="radio" id="opcion2" name="pregunta1" value="Calizas solo" [disabled]="respuestaCorrectaZ5"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Respuesta3', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Respuesta3' && comprobarPressedZ5}">Respuesta3</label>
+                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Calizas solo', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Calizas solo' && comprobarPressedZ5}">Calizas solo</label>
             </div>
         </div>
         <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ5">Comprobar</button>

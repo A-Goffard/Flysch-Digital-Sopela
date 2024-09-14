@@ -84,6 +84,12 @@ p {
     font-weight: bold;
 }
 
+b {
+    color: var(--darkgreen);
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
 img {
     border-radius: 0.7rem;
 }
@@ -139,6 +145,12 @@ img {
     justify-content: center;
     align-items: center;
 } 
+
+.respuestas {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
 
 .index {
     text-align: center;

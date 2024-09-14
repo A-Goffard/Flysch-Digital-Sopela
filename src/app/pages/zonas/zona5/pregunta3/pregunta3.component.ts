@@ -23,7 +23,7 @@ export class Pregunta3Component implements OnInit {
   comprobar() {
     this.comprobarPressedZ5 = true;
   
-    if (this.seleccionZ5 === 'XXXrespuestacorrecta') {
+    if (this.seleccionZ5 === 'Trozos de roca') {
       this.respuestaCorrectaZ5 = true;
       this.respuestaIncorrectaZ5 = false;
       this.respuestasCorrectasZ5['/zona5/pregunta3'] = true;
@@ -42,7 +42,7 @@ export class Pregunta3Component implements OnInit {
       // Almacenar estado específico de la pregunta 1
       localStorage.setItem('respuestaCorrectaZ5Pregunta3', 'false');
   
-      if (this.seleccionZ5 === 'xxxrespuestaerronea') {
+      if (this.seleccionZ5 === 'Conchas') {
         setTimeout(() => {
           this.router.navigate(['/zona5/pregunta3/pista1']);
         }, 2000);

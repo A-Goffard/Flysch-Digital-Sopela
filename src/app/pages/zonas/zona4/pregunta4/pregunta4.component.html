@@ -1,25 +1,29 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div class="margen">
-        <h4>Primera pregunta</h4>
-        <h5>¿Pregunta x indeterminada?</h5>
+        <h4>Cuarta pregunta</h4>
+        <p>¿Cómo pudo absorber la bruja la energía del meteorito?</p>
+        <p>¿Qué puede tener de valioso el impacto de  éste?</p>
+        <p>Investiguemos más sobre esto...</p>
+        <p>Una de las carácteristicas que puede ser más interesante es la fuerza de impacto.</p>
+        <h5>¿Qué pruebas puede dejar el impacto del meteorito en el estrato que tenemos aquí?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="Respuesta1" [disabled]="respuestaCorrectaZ4"
+                <input type="radio" id="opcion1" name="pregunta1" value="Tectitas" [disabled]="respuestaCorrectaZ4"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === 'Respuesta1', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === 'Respuesta1' && comprobarPressedZ4}">Respuesta1</label>
+                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === 'Tectitas', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === 'Tectitas' && comprobarPressedZ4}">Tectitas</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="Respuesta2" [disabled]="respuestaCorrectaZ4"
+                <input type="radio" id="opcion3" name="pregunta1" value="Carbón" [disabled]="respuestaCorrectaZ4"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === 'Respuesta2', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === 'Respuesta2' && comprobarPressedZ4}">Respuesta2</label>
+                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === 'Carbón', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === 'Carbón' && comprobarPressedZ4}">Carbón</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="Respuesta3" [disabled]="respuestaCorrectaZ4"
+                <input type="radio" id="opcion2" name="pregunta1" value="Betelgeuse" [disabled]="respuestaCorrectaZ4"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === 'Respuesta3', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === 'Respuesta3' && comprobarPressedZ4}">Respuesta3</label>
+                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === 'Betelgeuse', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === 'Betelgeuse' && comprobarPressedZ4}">Betelgeuse</label>
             </div>
         </div>
         <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ4">Comprobar</button>
