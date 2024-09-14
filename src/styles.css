@@ -90,6 +90,11 @@ b {
     font-weight: bolder;
 }
 
+i {
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
 img {
     border-radius: 0.7rem;
 }
