@@ -15,7 +15,7 @@ export class Actividad5Component {
 
   hecho() {
     const respuestasCorrectas = JSON.parse(localStorage.getItem('respuestasCorrectas') || '{}');
-    respuestasCorrectas['/zona1/actividades/actividad5'] = true;
+    respuestasCorrectas['/zona1/actividades/actividad4'] = true;
     localStorage.setItem('respuestasCorrectas', JSON.stringify(respuestasCorrectas));
 
     this.router.navigate(['/zona1/actividades/actividad5/hecho']);
