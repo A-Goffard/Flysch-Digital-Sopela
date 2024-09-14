@@ -29,7 +29,9 @@ export class NavHeaderComponent {
     if (this.animating) return;
     this.mobileNavOpen = !this.mobileNavOpen;
     this.animating = true;
+    
     const dropdownNav = document.querySelector('.dropdown-nav') as HTMLElement;
+    
     if (dropdownNav) {
       if (this.mobileNavOpen) {
         dropdownNav.classList.remove('close', 'animate__fadeOutLeft');
@@ -44,9 +46,9 @@ export class NavHeaderComponent {
         dropdownNav.classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__fadeOutLeft');
       }, { once: true });
     }
-    const hojitasIcon = document.querySelector('.hojitas') as HTMLElement;
-    if (hojitasIcon) {
-      hojitasIcon.style.transform = this.mobileNavOpen ? 'rotate(45deg)' : 'rotate(0deg)';
+    const maripositaIcon = document.querySelector('.mariposita') as HTMLElement;
+    if (maripositaIcon) {
+      maripositaIcon.style.transform = this.mobileNavOpen ? 'rotate(45deg)' : 'rotate(0deg)';
     }
   }
 
@@ -54,7 +56,9 @@ export class NavHeaderComponent {
     if (this.animating) return;
     this.mobileNavOpen = false;
     this.animating = true;
+
     const dropdownNav = document.querySelector('.dropdown-nav') as HTMLElement;
+    
     if (dropdownNav) {
       dropdownNav.classList.remove('open', 'animate__fadeInLeft');
       dropdownNav.classList.add('close', 'animate__animated', 'animate__fadeOutLeft');
@@ -63,9 +67,11 @@ export class NavHeaderComponent {
         dropdownNav.classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__fadeOutLeft');
       }, { once: true });
     }
-    const hojitasIcon = document.querySelector('.hojitas') as HTMLElement;
-    if (hojitasIcon) {
-      hojitasIcon.style.transform = 'rotate(0deg)';
+
+    const maripositaIcon = document.querySelector('.mariposita') as HTMLElement;
+    
+    if (maripositaIcon) {
+      maripositaIcon.style.transform = 'rotate(0deg)';
     }
   }
 }

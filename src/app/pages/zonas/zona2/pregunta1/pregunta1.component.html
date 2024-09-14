@@ -1,30 +1,32 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
 <!--     <app-back-component></app-back-component>
- -->    <h4>Primera pregunta</h4>
-     <p>Vamos a empezar tanteando el entorno para ver qué podemos descubrir.</p>
-    <h5>¿De qué color es la gran falla que atraviesa las rocas de arriba a abajo?</h5>
-    <div class="respuestas">
-        <div class="opcion">
-            <input type="radio" id="opcion1" name="pregunta1" value="Gris" [disabled]="respuestaCorrectaZ2"
-                (change)="onOptionChange($event)">
-            <label for="opcion1"
-                [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Gris', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Gris' && comprobarPressedZ2}">Gris</label>
+ -->
+    <div class="margen">
+        <h4>Primera pregunta</h4>
+        <p>Vamos a empezar tanteando el entorno para ver qué podemos descubrir.</p>
+        <h5>¿De qué color es la gran falla que atraviesa las rocas de arriba a abajo?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta1" value="Gris" [disabled]="respuestaCorrectaZ2"
+                    (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Gris', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Gris' && comprobarPressedZ2}">Gris</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta1" value="Blanca" [disabled]="respuestaCorrectaZ2"
+                    (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Blanca', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Blanca' && comprobarPressedZ2}">Blanca</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta1" value="Roja" [disabled]="respuestaCorrectaZ2"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Roja', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Roja' && comprobarPressedZ2}">Roja</label>
+            </div>
         </div>
-        <div class="opcion">
-            <input type="radio" id="opcion2" name="pregunta1" value="Blanca" [disabled]="respuestaCorrectaZ2"
-                (change)="onOptionChange($event);">
-            <label for="opcion2"
-                [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Blanca', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Blanca' && comprobarPressedZ2}">Blanca</label>
-        </div>
-        <div class="opcion">
-            <input type="radio" id="opcion3" name="pregunta1" value="Roja" [disabled]="respuestaCorrectaZ2"
-                (change)="onOptionChange($event);">
-            <label for="opcion3"
-                [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Roja', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Roja' && comprobarPressedZ2}">Roja</label>
-        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ2">Comprobar</button>
+    <!--     <button (click)="goToZona2()" class="btnA">Zona 2</button>
+    -->    <button *ngIf="respuestaCorrectaZ2" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
-    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ2">Comprobar</button>
-<!--     <button (click)="goToZona2()" class="btnA">Zona 2</button>
- -->    <button *ngIf="respuestaCorrectaZ2" (click)="goToExplicacion()" class="btnA" >Explicación</button>
-
 </div>

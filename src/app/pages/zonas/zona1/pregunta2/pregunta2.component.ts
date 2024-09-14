@@ -23,7 +23,7 @@ export class Pregunta2Component implements OnInit {
   comprobar() {
     this.comprobarPressed = true;
   
-    if (this.seleccion === 'Arcilla') {
+    if (this.seleccion === 'Lutita') {
       this.respuestaCorrecta = true;
       this.respuestaIncorrecta = false;
       this.respuestasCorrectas['/zona1/pregunta2'] = true;

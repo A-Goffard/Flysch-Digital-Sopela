@@ -1,3 +1,7 @@
+.mariposita {
+  width: 3rem;
+}
+
 header {
   box-sizing: border-box;
   z-index: 99;
@@ -10,7 +14,7 @@ header nav {
   position: relative;
   display: flex;
   flex-direction: row;
-  padding: 0.5em 0;
+  padding: 0;
   transition: 0.5s ease all;
   width: 100%;
   margin: 0;
@@ -23,9 +27,9 @@ header nav .branding img {
 header nav .icon {
   display: flex;
   align-items: center;
-  position: fixed;
-  top: 0.5rem;
-  right: 0.5rem;
+  position: absolute;
+ /*  top: 0.5rem; */
+  right: 0.3rem;
   z-index: 100;
 }
 
@@ -108,6 +112,6 @@ a:visited {
   color: var(--linkgreen);
 }
 
-ul {
+/* ul {
   margin-top: 3rem;
-}
+} */

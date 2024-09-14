@@ -122,12 +122,8 @@ img {
 }
 
 .container {
-/*     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     margin: 3rem;
-/*     padding: 2rem; */
+    
 }
 
 .margen {
@@ -151,18 +147,6 @@ img {
 .input-repuestas {
     margin: 1rem;
 }
-
-/* .background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: -1; 
-    background-repeat: no-repeat;
-} */
 
 /* Media query para pantallas grandes */
 @media (min-width: 769px) {

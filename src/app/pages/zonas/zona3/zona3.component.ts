@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NavZonasComponent } from '../../../shared/nav-zonas/nav-zonas.component';
-import { MarcadoresComponent } from "./componentes/marcadores/marcadores.component";
+import { MarcadoresComponent } from './componentes/marcadores/marcadores.component';
 import { BackComponentComponent } from "../../../shared/back-component/back-component.component";
 @Component({
   selector: 'app-zona3',

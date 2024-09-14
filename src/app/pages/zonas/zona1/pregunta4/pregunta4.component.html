@@ -1,32 +1,34 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
 <!--     <app-back-component></app-back-component>
- -->    <h4>Siguiente pregunta</h4>
-    <p>Teniendo en cuenta cuándo nos encontramos, podemos investigar algo más sobre esa época.</p>
-    <p>¿Qué dinosaurio se podría colar a través de esta grieta del espacio-tiempo?</p>
-    <p>Si ves alguno deberías correr...</p>
-    <h5>¿Qué dinosaurio vivia en la misma época que estas rocas?</h5>
-    <div class="respuestas">
-        <div class="opcion">
-            <input type="radio" id="opcion3" name="pregunta1" value="Triceratops" [disabled]="respuestaCorrecta"
-                (change)="onOptionChange($event);">
-            <label for="opcion3"
-                [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Triceratops', 'incorrecta': respuestaIncorrecta && seleccion === 'Triceratops' && comprobarPressed}">Triceratops</label>
+ -->
+    <div class="margen">
+        <h4>Siguiente pregunta</h4>
+        <p>Teniendo en cuenta cuándo nos encontramos, podemos investigar algo más sobre esa época.</p>
+        <p>¿Qué dinosaurio se podría colar a través de esta grieta del espacio-tiempo?</p>
+        <p>Si ves alguno deberías correr...</p>
+        <h5>¿Qué dinosaurio vivia en la misma época que estas rocas?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta1" value="Triceratops" [disabled]="respuestaCorrecta"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Triceratops', 'incorrecta': respuestaIncorrecta && seleccion === 'Triceratops' && comprobarPressed}">Triceratops</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta1" value="Herrerasaurus"
+                    [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Herrerasaurus', 'incorrecta': respuestaIncorrecta && seleccion === 'Herrerasaurus' && comprobarPressed}">Herrerasaurus</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta1" value="Kentrosaurus"
+                    [disabled]="respuestaCorrecta" (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Kentrosaurus', 'incorrecta': respuestaIncorrecta && seleccion === 'Kentrosaurus' && comprobarPressed}">Kentrosaurus</label>
+            </div>
         </div>
-        <div class="opcion">
-            <input type="radio" id="opcion2" name="pregunta1" value="Herrerasaurus"
-                [disabled]="respuestaCorrecta" (change)="onOptionChange($event);">
-            <label for="opcion2"
-                [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Herrerasaurus', 'incorrecta': respuestaIncorrecta && seleccion === 'Herrerasaurus' && comprobarPressed}">Herrerasaurus</label>
-        </div>
-        <div class="opcion">
-            <input type="radio" id="opcion1" name="pregunta1" value="Kentrosaurus"
-                [disabled]="respuestaCorrecta" (change)="onOptionChange($event)">
-            <label for="opcion1"
-                [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Kentrosaurus', 'incorrecta': respuestaIncorrecta && seleccion === 'Kentrosaurus' && comprobarPressed}">Kentrosaurus</label>
-        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+    <!--     <button (click)="goToZona1()" class="btnA">Zona 1</button>
+    -->    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
-    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-<!--     <button (click)="goToZona1()" class="btnA">Zona 1</button>
- -->    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
-
 </div>

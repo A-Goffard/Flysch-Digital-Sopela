@@ -1,5 +1,5 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
-<!--   <app-back-component></app-back-component> -->
+  <div class="margen">
   <h4>Primera pregunta</h4>
   <p>Lo primero que necesitamos saber es dónde está la puerta al pasado.</p>
   <p>¿Dónde se encuentra la brecha del espacio tiempo que debemos cerrar?</p>
@@ -21,5 +21,5 @@
   <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
 <!--   <button (click)="goToZona1()" class="btnA" >Zona 1</button> -->
   <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
-
+  </div>
 </div>

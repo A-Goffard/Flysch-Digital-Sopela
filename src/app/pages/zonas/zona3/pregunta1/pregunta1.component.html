@@ -1,33 +1,35 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
-    <h4>Primera pregunta</h4>
-    <p>Intenta encontrar uno y sacarle una foto.</p>
-    <h5>¿Cuál de estos fósiles es un ammonite?</h5>
-    <div class="respuestas">
-        <div class="opcion">
-            <input type="radio" id="opcion1" name="pregunta1" value="Ammonite" [disabled]="respuestaCorrectaZ3"
-                (change)="onOptionChange($event)">
-            <label for="opcion1"
-                [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Ammonite', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Ammonite' && comprobarPressedZ3}">
-                <img src="images/fosiles/18.png" alt="Ammonite" width="100" height="100">
-            </label>
+    <div class="margen">
+        <h4>Primera pregunta</h4>
+        <p>Intenta encontrar uno y sacarle una foto.</p>
+        <h5>¿Cuál de estos fósiles es un ammonite?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta1" value="Ammonite" [disabled]="respuestaCorrectaZ3"
+                    (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Ammonite', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Ammonite' && comprobarPressedZ3}">
+                    <img src="images/fosiles/18.png" alt="Ammonite" width="100" height="100">
+                </label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta1" value="Innocerámido" [disabled]="respuestaCorrectaZ3"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Innocerámido', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Innocerámido' && comprobarPressedZ3}">
+                    <img src="images/fosiles/15.png" alt="Innocerámido" width="100" height="100">
+                </label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta1" value="Coprolito" [disabled]="respuestaCorrectaZ3"
+                    (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Coprolito', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Coprolito' && comprobarPressedZ3}">
+                    <img src="images/fosiles/30.png" alt="Coprolito" width="100" height="100">
+                </label>
+            </div>
         </div>
-        <div class="opcion">
-            <input type="radio" id="opcion3" name="pregunta1" value="Innocerámido" [disabled]="respuestaCorrectaZ3"
-                (change)="onOptionChange($event);">
-            <label for="opcion3"
-                [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Innocerámido', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Innocerámido' && comprobarPressedZ3}">
-                <img src="images/fosiles/15.png" alt="Innocerámido" width="100" height="100">
-            </label>
-        </div>
-        <div class="opcion">
-            <input type="radio" id="opcion2" name="pregunta1" value="Coprolito" [disabled]="respuestaCorrectaZ3"
-                (change)="onOptionChange($event);">
-            <label for="opcion2"
-                [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Coprolito', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Coprolito' && comprobarPressedZ3}">
-                <img src="images/fosiles/30.png" alt="Coprolito" width="100" height="100">
-            </label>
-        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ3">Comprobar</button>
+        <button *ngIf="respuestaCorrectaZ3" (click)="goToExplicacion()" class="btnA">Explicación</button>
     </div>
-    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ3">Comprobar</button>
-    <button *ngIf="respuestaCorrectaZ3" (click)="goToExplicacion()" class="btnA">Explicación</button>
 </div>

@@ -11,16 +11,16 @@ import { RouterModule, Router } from '@angular/router';
 })
 export class MarcadoresComponent implements AfterViewInit, OnInit {
   currentRoute: string = '';
-  respuestasCorrectas: { [key: string]: boolean } = {};
+  respuestasCorrectasZ2: { [key: string]: boolean } = {};
   allCompleted: boolean = false;
 
   constructor(private router: Router) {}
 
   ngOnInit() {
     this.currentRoute = this.router.url;
-    const respuestasGuardadas = localStorage.getItem('respuestasCorrectas');
+    const respuestasGuardadas = localStorage.getItem('respuestasCorrectasZ2');
     if (respuestasGuardadas) {
-      this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
+      this.respuestasCorrectasZ2 = JSON.parse(respuestasGuardadas);
     }
     this.checkAllCompleted(); // Comprobamos si todas las preguntas y actividades están completadas
   }
@@ -52,8 +52,8 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
   }
 
   isAnsweredCorrectly(route: string): boolean {
-    const respuestasCorrectas = JSON.parse(localStorage.getItem('respuestasCorrectas') || '{}');
-    return respuestasCorrectas[route] === true;
+    const respuestasCorrectasZ2 = JSON.parse(localStorage.getItem('respuestasCorrectasZ2') || '{}');
+    return respuestasCorrectasZ2[route] === true;
   }
 
   checkAllCompleted() {

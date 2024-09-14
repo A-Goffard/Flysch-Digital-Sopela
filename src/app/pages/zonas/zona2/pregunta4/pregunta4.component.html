@@ -1,30 +1,31 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
-    <app-back-component></app-back-component>
-    <h4>Siguiente pregunta</h4>
-    <p>Sabemos que Los Cárpatos se formaron al mismo tiempo que esta zona se lebantó y comenzó a salir del agua.</p>
-    <p>¿Sabías que los Montes Cárpatos tienen una misteriosa conexión con la brujería?</p>
-    <h5>¿Qué famoso personaje de leyenda relacionado con la magia y lo sobrenatural se dice que habitaba en esta región?</h5>
-    <div class="respuestas">
-        <div class="opcion">
-            <input type="radio" id="opcion1" name="pregunta1" value="Merlín" [disabled]="respuestaCorrectaZ2"
-                (change)="onOptionChange($event)">
-            <label for="opcion1"
-                [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Merlín', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Merlín' && comprobarPressedZ2}">Merlín</label>
+    <div class="margen">
+        <h4>Siguiente pregunta</h4>
+        <p>Sabemos que Los Cárpatos se formaron al mismo tiempo que esta zona se lebantó y comenzó a salir del agua.</p>
+        <p>¿Sabías que los Montes Cárpatos tienen una misteriosa conexión con la brujería?</p>
+        <h5>¿Qué famoso personaje de leyenda relacionado con la magia y lo sobrenatural se dice que habitaba en esta región?</h5>
+        <div class="respuestas">
+            <div class="opcion">
+                <input type="radio" id="opcion1" name="pregunta1" value="Merlín" [disabled]="respuestaCorrectaZ2"
+                    (change)="onOptionChange($event)">
+                <label for="opcion1"
+                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Merlín', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Merlín' && comprobarPressedZ2}">Merlín</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion3" name="pregunta1" value="Baba Yaga" [disabled]="respuestaCorrectaZ2"
+                    (change)="onOptionChange($event);">
+                <label for="opcion3"
+                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Baba Yaga', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Baba Yaga' && comprobarPressedZ2}">Baba Yaga</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="opcion2" name="pregunta1" value="Drácula" [disabled]="respuestaCorrectaZ2"
+                    (change)="onOptionChange($event);">
+                <label for="opcion2"
+                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Drácula', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Drácula' && comprobarPressedZ2}">Drácula</label>
+            </div>
         </div>
-        <div class="opcion">
-            <input type="radio" id="opcion3" name="pregunta1" value="Baba Yaga" [disabled]="respuestaCorrectaZ2"
-                (change)="onOptionChange($event);">
-            <label for="opcion3"
-                [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Baba Yaga', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Baba Yaga' && comprobarPressedZ2}">Baba Yaga</label>
-        </div>
-        <div class="opcion">
-            <input type="radio" id="opcion2" name="pregunta1" value="Drácula" [disabled]="respuestaCorrectaZ2"
-                (change)="onOptionChange($event);">
-            <label for="opcion2"
-                [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Drácula', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Drácula' && comprobarPressedZ2}">Drácula</label>
-        </div>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ2">Comprobar</button>
+<!--         <button (click)="goToZona2()" class="btnA">Zona 2</button>
+ -->        <button *ngIf="respuestaCorrectaZ2" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
-    <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ2">Comprobar</button>
-    <button (click)="goToZona2()" class="btnA">Zona 2</button>
-    <button *ngIf="respuestaCorrectaZ2" (click)="goToExplicacion()" class="btnA" >Explicación</button>
 </div>
