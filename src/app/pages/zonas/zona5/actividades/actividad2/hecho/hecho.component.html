@@ -1,7 +1,15 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
-    <app-back-component></app-back-component>
     <p>¿Lo has conseguido?</p>
-    <p>¡¡Gecial!!</p>
-    <p>A por lo siguiente</p>
+    <p>¡Genial!</p>
+    <p>¡¡La última pista!!</p>
+    <p><b>¿Has podido ver el fósil?</b></p>
+    <p>Has encontrado la criatura que se ha escapado del pasado.</p>
+    <p>Su nombre es la clave.</p>
+    <p>Se creía extinto pero estas estructuras se han encontrado en la actualidad en algunos ambientes marinos.</p>
+    <p>Esto nos ayudará a desbloquear la aplicación para cerrar el portal de una vez por todas</p>
+    <p>¿Cuál es la palabra clave?</p>
+    <input class="input" type="text" [(ngModel)]="clave" placeholder="Introduce la clave">
+    <p *ngIf="error" style="color: red;">Clave incorrecta. Inténtalo de nuevo.</p>
     <button class="btnA" (click)="siguiente()">Ok</button>
+    <button class="btnA" (click)="ayuda()">Ayuda</button>
 </div>

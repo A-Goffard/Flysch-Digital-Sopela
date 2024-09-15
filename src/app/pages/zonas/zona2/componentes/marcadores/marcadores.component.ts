@@ -11,16 +11,16 @@ import { RouterModule, Router } from '@angular/router';
 })
 export class MarcadoresComponent implements AfterViewInit, OnInit {
   currentRoute: string = '';
-  respuestasCorrectasZ2: { [key: string]: boolean } = {};
+  respuestasCorrectas: { [key: string]: boolean } = {};
   allCompleted: boolean = false;
 
   constructor(private router: Router) {}
 
   ngOnInit() {
     this.currentRoute = this.router.url;
-    const respuestasGuardadas = localStorage.getItem('respuestasCorrectasZ2');
+    const respuestasGuardadas = localStorage.getItem('respuestasCorrectas');
     if (respuestasGuardadas) {
-      this.respuestasCorrectasZ2 = JSON.parse(respuestasGuardadas);
+      this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
     }
     this.checkAllCompleted(); // Comprobamos si todas las preguntas y actividades están completadas
   }
@@ -52,8 +52,8 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
   }
 
   isAnsweredCorrectly(route: string): boolean {
-    const respuestasCorrectasZ2 = JSON.parse(localStorage.getItem('respuestasCorrectasZ2') || '{}');
-    return respuestasCorrectasZ2[route] === true;
+    const respuestasCorrectas = JSON.parse(localStorage.getItem('respuestasCorrectas') || '{}');
+    return respuestasCorrectas[route] === true;
   }
 
   checkAllCompleted() {
@@ -64,10 +64,6 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
       '/zona2/pregunta4',
       '/zona2/pregunta5',
       '/zona2/actividades/actividad1',
-      '/zona2/actividades/actividad2',
-      '/zona2/actividades/actividad3',
-      '/zona2/actividades/actividad4',
-      '/zona2/actividades/actividad5'
     ];
 
     this.allCompleted = requiredRoutes.every(route => this.isAnsweredCorrectly(route));

@@ -37,14 +37,6 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
       }, index * 300);
     });
 
-    // Girar la mariposita después de 3 segundos
-/*     const navZonas = document.querySelector('shared-nav-header');
-    const mariposita = navZonas?.querySelector('.mariposita');
-    if (mariposita) {
-      setTimeout(() => {
-        mariposita.classList.add('rotate');
-      }, 2000);
-    } */
   }
 
   isCurrentRoute(route: string): boolean {
