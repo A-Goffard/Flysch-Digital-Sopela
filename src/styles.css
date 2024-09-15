@@ -132,15 +132,19 @@ img {
     flex-direction: row;
 }
 
-.container {
+/* .container {
     margin: 3rem;
     
-}
+} */
 
 .margen {
-    margin: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
 }
-
+.margenGeneral{
+margin-top: 5.5rem;
+}
 .centre {
     margin: 0;
     padding: 0;

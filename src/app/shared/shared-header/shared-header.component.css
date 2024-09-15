@@ -1,0 +1,35 @@
+header {
+    position: fixed; /* Asegura que el menú está fijo en la pantalla */
+    top: 0; /* Coloca el menú en la parte superior */
+    left: 0; /* Alinea el menú a la izquierda */
+    width: 100%; /* Hace que el menú ocupe todo el ancho */
+    z-index: 50; /* Asegura que el menú esté por encima de otros elementos */
+    background-color: white; /* Asegura que el fondo del menú sea visible sobre otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: agrega una sombra para separar el menú del contenido */
+    padding: 0.5rem 1rem; /* Ajusta el espaciado interno del menú */
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0; /* Elimina el margen para que el menú quede pegado a los bordes */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+li {
+    margin: 0 1rem; /* Ajusta el margen entre los elementos del menú */
+}
+
+.icon {
+    width: 3rem; /* Asegura que las imágenes del menú no sean demasiado grandes */
+}
+
+.logoSuelto{
+    width: 4.5rem;
+    position: fixed; /* Asegura que el menú está fijo en la pantalla */
+    top: 0.5rem; /* Coloca el menú en la parte superior */
+    right: 0.5rem; 
+
+}

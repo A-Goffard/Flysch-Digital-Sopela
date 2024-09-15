@@ -1,19 +1,18 @@
 {
   "name": "flysch-digital",
   "version": "0.0.0",
-"scripts": {
-  "ng": "ng",
-  "start": "ng serve",
-  "build": "ng build",
-  "build:href": "ng build --base-href ./",
-  "delete:docs": "rimraf docs",
-  "redirects:dist": "cpx \"redirects/**/*\" ./docs", 
-  "copy:dist": "cpx \"dist/flysch-digital/browser/**/*\" ./docs",
-  "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist && npm run redirects:dist",
-  "watch": "ng build --watch --configuration development",
-  "test": "ng test" 
-}
-,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:href": "ng build --base-href ./",
+    "delete:docs": "rimraf docs",
+    "redirects:dist": "cpx \"redirects/**/*\" ./docs",
+    "copy:dist": "cpx \"dist/flysch-digital/browser/**/*\" ./docs",
+    "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist && npm run redirects:dist",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.1.0",
@@ -25,8 +24,11 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
+    "braces": "^3.0.3",
+    "chokidar": "^4.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "webpack": "^5.94.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {

@@ -38,13 +38,13 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
     });
 
     // Girar la mariposita después de 3 segundos
-    const navZonas = document.querySelector('app-nav-zonas');
+/*     const navZonas = document.querySelector('shared-nav-header');
     const mariposita = navZonas?.querySelector('.mariposita');
     if (mariposita) {
       setTimeout(() => {
         mariposita.classList.add('rotate');
       }, 2000);
-    }
+    } */
   }
 
   isCurrentRoute(route: string): boolean {
@@ -64,10 +64,10 @@ export class MarcadoresComponent implements AfterViewInit, OnInit {
       '/zona1/pregunta4',
       '/zona1/pregunta5',
       '/zona1/actividades/actividad1',
-      '/zona1/actividades/actividad2',
+/*       '/zona1/actividades/actividad2',
       '/zona1/actividades/actividad3',
       '/zona1/actividades/actividad4',
-      '/zona1/actividades/actividad5'
+      '/zona1/actividades/actividad5' */
     ];
 
     this.allCompleted = requiredRoutes.every(route => this.isAnsweredCorrectly(route));

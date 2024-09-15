@@ -27,11 +27,12 @@ header nav .branding img {
 header nav .icon {
   display: flex;
   align-items: center;
-  position: absolute;
- /*  top: 0.5rem; */
-  right: 0.3rem;
+  position: fixed; /* Cambiar de absolute a fixed */
+  top: 0rem; /* Ajusta según la altura deseada */
+  left: 0rem; /* Ajusta según el margen derecho deseado */
   z-index: 100;
 }
+
 
 header nav button {
   width: 4rem;
@@ -42,10 +43,10 @@ header nav button {
   margin: 0.5rem;
 }
 
-header nav .hojitas {
+/* header nav .hojitas {
   width: 100%;
   transition: transform 0.5s ease;
-}
+} */
 
 header nav .dropdown-nav {
   display: flex;
@@ -112,6 +113,32 @@ a:visited {
   color: var(--linkgreen);
 }
 
-/* ul {
-  margin-top: 3rem;
-} */
+.navMov {
+  padding-top: 3rem;
+}
+
+.rotate {
+  animation: rotateScaleAnimation 0.7s;
+}
+
+@keyframes rotateScaleAnimation {
+  0% {
+      transform: rotate(0deg) scale(1);
+  }
+
+  25% {
+      transform: rotate(15deg) scale(1.1);
+  }
+
+  50% {
+      transform: rotate(-15deg) scale(1.1);
+  }
+
+  75% {
+      transform: rotate(15deg) scale(1.1);
+  }
+
+  100% {
+      transform: rotate(0deg) scale(1);
+  }
+}

@@ -13,10 +13,10 @@ export class FalloComponent{
   constructor(private router: Router) {}
 
   volverIntentar() {
-    this.router.navigate(['/zona1/actividades/actividad2']);
+    this.router.navigate(['/zona1/actividades/actividad1/hecho']);
   }
 
   siguiente() {
-    this.router.navigate(['/zona1/actividades/actividad3']);
+    this.router.navigate(['/zona1']);
   }
 }

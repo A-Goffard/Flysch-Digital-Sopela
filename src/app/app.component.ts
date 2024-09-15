@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { NavHeaderComponent } from "./shared/nav-header/nav-header.component";
-import { BackComponentComponent } from "./shared/back-component/back-component.component";
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
+import { NavZonasComponent } from "./shared/shared-header/shared-header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavHeaderComponent, BackComponentComponent, CommonModule],
+  imports: [RouterOutlet, NavHeaderComponent, CommonModule, NavZonasComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

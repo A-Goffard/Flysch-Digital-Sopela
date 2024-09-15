@@ -5,11 +5,11 @@
       </div> -->
       <div class="icon">
         <button (click)="toggleMobileNav()">
-          <img [class.icon-active]="mobileNavOpen" src="images/mariposita.png" class="mariposita" alt="Menu">
+          <img [class.icon-active]="mobileNavOpen" src="images/icons/menu.png" class="mariposita" alt="Menu">
         </button>
       </div>
       <ul [ngClass]="{'dropdown-nav': true, 'open': mobileNavOpen, 'close': !mobileNavOpen}">
-        <li>
+        <li class="navMov">
           <a routerLink="/home" (click)="closeMobileNav()">Inicio</a>
         </li>
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { NavZonasComponent } from '../../../shared/nav-zonas/nav-zonas.component';
+import { NavZonasComponent } from '../../../shared/shared-header/shared-header.component';
 import { MarcadoresComponent } from "./componentes/marcadores/marcadores.component";
 import { BackComponentComponent } from "../../../shared/back-component/back-component.component";
 
