@@ -12,14 +12,14 @@ header {
 ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: right;
     padding: 0;
-    margin: 0; /* Elimina el margen para que el menú quede pegado a los bordes */
-    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; 
+    list-style: none; 
 }
 
 li {
-    margin: 0 1rem; /* Ajusta el margen entre los elementos del menú */
+    margin: 0 0.5rem; /* Ajusta el margen entre los elementos del menú */
 }
 
 .icon {
@@ -28,8 +28,8 @@ li {
 
 .logoSuelto{
     width: 4.5rem;
-    position: fixed; /* Asegura que el menú está fijo en la pantalla */
-    top: 0.5rem; /* Coloca el menú en la parte superior */
-    right: 0.5rem; 
+/*     position: fixed; 
+    top: 0.5rem; 
+    right: 0.5rem;  */
 
 }

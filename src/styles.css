@@ -7,7 +7,6 @@
     text-decoration: none;
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box;
 }
 
 :root {
@@ -23,10 +22,6 @@
 
 .logo {
     max-width: 22.5rem;
-}
-
-.hojitas, .mariposita {
-    max-width: 10rem;
 }
 
 body {
@@ -132,11 +127,6 @@ img {
     flex-direction: row;
 }
 
-/* .container {
-    margin: 3rem;
-    
-} */
-
 .margen {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -146,8 +136,8 @@ img {
 margin-top: 5.5rem;
 }
 .centre {
-    margin: 0;
-    padding: 0;
+/*     margin: 0;
+    padding: 0; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -167,6 +157,16 @@ margin-top: 5.5rem;
 
 .input-repuestas {
     margin: 1rem;
+}
+
+input{
+    height: 3rem;
+    max-width: 15rem;
+    border-width: 0.3rem;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    color: var(--linkgreen);
+    font-size: 1.5rem;
 }
 
 /* Media query para pantallas grandes */

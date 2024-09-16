@@ -29,7 +29,7 @@ header nav .icon {
   align-items: center;
   position: fixed; /* Cambiar de absolute a fixed */
   top: 0rem; /* Ajusta según la altura deseada */
-  left: 0rem; /* Ajusta según el margen derecho deseado */
+  left: 0.5rem; /* Ajusta según el margen derecho deseado */
   z-index: 100;
 }
 
