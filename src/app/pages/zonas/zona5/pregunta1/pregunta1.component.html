@@ -6,25 +6,25 @@
         <h5>¿Qué tipo de fósiles son los que encontramos en estas rocas que sobersalen?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="Huellas" [disabled]="respuestaCorrectaZ5"
+                <input type="radio" id="opcion1" name="pregunta1" value="Huellas" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Huellas', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Huellas' && comprobarPressedZ5}">Huellas</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Huellas', 'incorrecta': respuestaIncorrecta && seleccion === 'Huellas' && comprobarPressed}">Huellas</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="Esqueleto" [disabled]="respuestaCorrectaZ5"
+                <input type="radio" id="opcion3" name="pregunta1" value="Esqueleto" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Esqueleto', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Esqueleto' && comprobarPressedZ5}">Esqueleto</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Esqueleto', 'incorrecta': respuestaIncorrecta && seleccion === 'Esqueleto' && comprobarPressed}">Esqueleto</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="Concha" [disabled]="respuestaCorrectaZ5"
+                <input type="radio" id="opcion2" name="pregunta1" value="Concha" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Concha', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Concha' && comprobarPressedZ5}">Concha</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Concha', 'incorrecta': respuestaIncorrecta && seleccion === 'Concha' && comprobarPressed}">Concha</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ5">Comprobar</button>
-        <button *ngIf="respuestaCorrectaZ5" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
 </div>

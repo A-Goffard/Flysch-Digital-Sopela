@@ -12,36 +12,36 @@ import { BackComponentComponent } from "../../../../shared/back-component/back-c
 })
 export class Pregunta3Component implements OnInit {
   mostrarLupa = false;
-  respuestaCorrectaZ2 = false;
-  respuestaIncorrectaZ2 = false;
-  respuestasCorrectasZ2: { [key: string]: boolean } = {};
-  seleccionZ2: string = '';
-  comprobarPressedZ2 = false;
+  respuestaCorrecta = false;
+  respuestaIncorrecta = false;
+  respuestasCorrectas: { [key: string]: boolean } = {};
+  seleccion: string = '';
+  comprobarPressed = false;
 
   constructor(private router: Router) {}
   comprobar() {
-    this.comprobarPressedZ2 = true;
+    this.comprobarPressed = true;
   
-    if (this.seleccionZ2 === 'Los Cárpatos') {
-      this.respuestaCorrectaZ2 = true;
-      this.respuestaIncorrectaZ2 = false;
-      this.respuestasCorrectasZ2['/zona2/pregunta3'] = true;
+    if (this.seleccion === 'Los Cárpatos') {
+      this.respuestaCorrecta = true;
+      this.respuestaIncorrecta = false;
+      this.respuestasCorrectas['/zona2/pregunta3'] = true;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaZ2Pregunta3', 'true');
+      localStorage.setItem('respuestaCorrectaZona2Pregunta3', 'true');
   
       setTimeout(() => {
         this.router.navigate(['/zona2/pregunta3/explicacion3']);
       }, 2000);
     } else {
-      this.respuestaCorrectaZ2 = false;
-      this.respuestaIncorrectaZ2 = true;
-      this.respuestasCorrectasZ2['/zona2/pregunta3'] = false;
+      this.respuestaCorrecta = false;
+      this.respuestaIncorrecta = true;
+      this.respuestasCorrectas['/zona2/pregunta3'] = false;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaZ2Pregunta3', 'false');
+      localStorage.setItem('respuestaCorrectaZona2Pregunta3', 'false');
   
-      if (this.seleccionZ2 === 'Los Andes') {
+      if (this.seleccion === 'Los Andes') {
         setTimeout(() => {
           this.router.navigate(['/zona2/pregunta3/pista1']);
         }, 2000);
@@ -52,8 +52,8 @@ export class Pregunta3Component implements OnInit {
       }
     }
   
-    localStorage.setItem('respuestasCorrectasZ2', JSON.stringify(this.respuestasCorrectasZ2));
-    localStorage.setItem('seleccionZ2Pregunta3', this.seleccionZ2);
+    localStorage.setItem('respuestasCorrectas', JSON.stringify(this.respuestasCorrectas));
+    localStorage.setItem('seleccionPregunta3', this.seleccion);
   }
 
   goToZona2() {
@@ -65,28 +65,28 @@ export class Pregunta3Component implements OnInit {
   }
   
   ngOnInit() {
-    const respuestasGuardadasZ2 = localStorage.getItem('respuestasCorrectasZ2');
-    if (respuestasGuardadasZ2) {
-      this.respuestasCorrectasZ2 = JSON.parse(respuestasGuardadasZ2);
+    const respuestasGuardadas = localStorage.getItem('respuestasCorrectas');
+    if (respuestasGuardadas) {
+      this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
     }
   
-    const seleccionZ2GuardadaZ2 = localStorage.getItem('seleccionZ2Pregunta3');
-    if (seleccionZ2GuardadaZ2) {
-      this.seleccionZ2 = seleccionZ2GuardadaZ2;
+    const seleccionGuardada = localStorage.getItem('seleccionPregunta3');
+    if (seleccionGuardada) {
+      this.seleccion = seleccionGuardada;
     }
   
     // Recuperar el estado específico de la pregunta 1
-    const respuestaCorrectaZ2Pregunta3 = localStorage.getItem('respuestaCorrectaZ2Pregunta3');
-    this.respuestaCorrectaZ2 = respuestaCorrectaZ2Pregunta3 === 'true';
-    this.respuestaIncorrectaZ2 = !this.respuestaCorrectaZ2 && !!this.seleccionZ2;
+    const respuestaCorrectaZona2Pregunta3 = localStorage.getItem('respuestaCorrectaZona2Pregunta3');
+    this.respuestaCorrecta = respuestaCorrectaZona2Pregunta3 === 'true';
+    this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
   }
   
 
   onOptionChange(event: Event) {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement) {
-      this.seleccionZ2 = inputElement.value;
-      this.comprobarPressedZ2 = false;
+      this.seleccion = inputElement.value;
+      this.comprobarPressed = false;
     }
   }
 }

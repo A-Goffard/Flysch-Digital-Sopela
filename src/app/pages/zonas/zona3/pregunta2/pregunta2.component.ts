@@ -3,7 +3,6 @@ import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BackComponentComponent } from "../../../../shared/back-component/back-component.component";
 
-
 @Component({
   selector: 'app-zona3-pregunta2',
   standalone: true,
@@ -13,38 +12,39 @@ import { BackComponentComponent } from "../../../../shared/back-component/back-c
 })
 export class Pregunta2Component implements OnInit {
   mostrarLupa = false;
-  respuestaCorrectaZ3 = false;
-  respuestaIncorrectaZ3 = false;
-  respuestasCorrectasZ3: { [key: string]: boolean } = {};
-  seleccionZ3: string = '';
-  comprobarPressedZ3 = false;
+  respuestaCorrecta = false;
+  respuestaIncorrecta = false;
+  respuestasCorrectas: { [key: string]: boolean } = {};
+  seleccion: string = '';
+  comprobarPressed = false;
 
   constructor(private router: Router) {}
+  
   comprobar() {
-    this.comprobarPressedZ3 = true;
-  
-    if (this.seleccionZ3 === 'Innocerámidos') {
-      this.respuestaCorrectaZ3 = true;
-      this.respuestaIncorrectaZ3 = false;
-      this.respuestasCorrectasZ3['/zona3/pregunta2'] = true;
-  
-      // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaZ3Pregunta2', 'true');
-  
+    this.comprobarPressed = true;
+
+    if (this.seleccion === 'Innocerámidos') {
+      this.respuestaCorrecta = true;
+      this.respuestaIncorrecta = false;
+      this.respuestasCorrectas['/zona3/pregunta2'] = true;
+
+      // Almacenar estado específico de la pregunta 2
+      localStorage.setItem('respuestaCorrectaZona3Pregunta2', 'true');
+
       setTimeout(() => {
         this.router.navigate(['/zona3/pregunta2/explicacion2']);
       }, 2000);
     } else {
-      this.respuestaCorrectaZ3 = false;
-      this.respuestaIncorrectaZ3 = true;
-      this.respuestasCorrectasZ3['/zona3/pregunta2'] = false;
-  
-      // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaZ3Pregunta2', 'false');
-  
-      if (this.seleccionZ3 === 'Zoophycus') {
+      this.respuestaCorrecta = false;
+      this.respuestaIncorrecta = true;
+      this.respuestasCorrectas['/zona3/pregunta2'] = false;
+
+      // Almacenar estado específico de la pregunta 2
+      localStorage.setItem('respuestaCorrectaZona3Pregunta2', 'false');
+
+      if (this.seleccion === 'Zoophycus') {
         setTimeout(() => {
-          this.router.navigate(['/zona3/pregunta2pista1']);
+          this.router.navigate(['/zona3/pregunta2/pista1']);
         }, 2000);
       } else {
         setTimeout(() => {
@@ -52,11 +52,10 @@ export class Pregunta2Component implements OnInit {
         }, 2000);
       }
     }
-  
-    localStorage.setItem('respuestasCorrectasZ3', JSON.stringify(this.respuestasCorrectasZ3));
-    localStorage.setItem('seleccionZ3Pregunta2', this.seleccionZ3);
+
+    localStorage.setItem('respuestasCorrectas', JSON.stringify(this.respuestasCorrectas));
+    localStorage.setItem('seleccionPregunta2', this.seleccion);
   }
-  
 
   goToZona3() {
     this.router.navigate(['/zona3']);
@@ -65,30 +64,29 @@ export class Pregunta2Component implements OnInit {
   goToExplicacion() {
     this.router.navigate(['/zona3/pregunta2/explicacion2']);
   }
-  
+
   ngOnInit() {
-    const respuestasGuardadasZ3 = localStorage.getItem('respuestasCorrectasZ3');
-    if (respuestasGuardadasZ3) {
-      this.respuestasCorrectasZ3 = JSON.parse(respuestasGuardadasZ3);
+    const respuestasGuardadas = localStorage.getItem('respuestasCorrectas');
+    if (respuestasGuardadas) {
+      this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
     }
-  
-    const seleccionZ3GuardadaZ3 = localStorage.getItem('seleccionZ3Pregunta2');
-    if (seleccionZ3GuardadaZ3) {
-      this.seleccionZ3 = seleccionZ3GuardadaZ3;
+
+    const seleccionGuardada = localStorage.getItem('seleccionPregunta2');
+    if (seleccionGuardada) {
+      this.seleccion = seleccionGuardada;
     }
-  
-    // Recuperar el estado específico de la pregunta 1
-    const respuestaCorrectaZ3Pregunta2 = localStorage.getItem('respuestaCorrectaZ3Pregunta1');
-    this.respuestaCorrectaZ3 = respuestaCorrectaZ3Pregunta2 === 'true';
-    this.respuestaIncorrectaZ3 = !this.respuestaCorrectaZ3 && !!this.seleccionZ3;
+
+    // Recuperar el estado específico de la pregunta 2
+    const respuestaCorrectaZona3Pregunta2 = localStorage.getItem('respuestaCorrectaZona3Pregunta2');
+    this.respuestaCorrecta = respuestaCorrectaZona3Pregunta2 === 'true';
+    this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
   }
-  
 
   onOptionChange(event: Event) {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement) {
-      this.seleccionZ3 = inputElement.value;
-      this.comprobarPressedZ3 = false;
+      this.seleccion = inputElement.value;
+      this.comprobarPressed = false;
     }
   }
 }

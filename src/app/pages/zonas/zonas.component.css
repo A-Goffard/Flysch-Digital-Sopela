@@ -1,4 +1,5 @@
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +15,15 @@
     box-shadow: 15px 15px 38px -13px rgba(0,0,0,0.75);
 }
 
-img {
+.img {
     width: 100%;
     box-shadow: 0px 0px 20px 1px var(--linkgreen);
+}
+
+.okis {
+    position: absolute;
+    top: 2rem;
+    margin: 2rem;
+    width: 10rem;
+    filter: drop-shadow(4px 2px 5px rgba(0,0,0,0.66));
 }

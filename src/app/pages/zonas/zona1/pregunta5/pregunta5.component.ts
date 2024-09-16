@@ -28,7 +28,7 @@ export class Pregunta5Component implements OnInit {
       this.respuestasCorrectas['/zona1/pregunta5'] = true;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaPregunta5', 'true');
+      localStorage.setItem('respuestaCorrectaZona1Pregunta5', 'true');
   
       setTimeout(() => {
         this.router.navigate(['/zona1/pregunta5/explicacion5']);
@@ -39,7 +39,7 @@ export class Pregunta5Component implements OnInit {
       this.respuestasCorrectas['/zona1/pregunta5'] = false;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaPregunta5', 'false');
+      localStorage.setItem('respuestaCorrectaZona1Pregunta5', 'false');
   
       if (this.seleccion === 'Más de 200 Ma') {
         setTimeout(() => {
@@ -77,8 +77,8 @@ export class Pregunta5Component implements OnInit {
     }
   
     // Recuperar el estado específico de la pregunta 1
-    const respuestaCorrectaPregunta5 = localStorage.getItem('respuestaCorrectaPregunta5');
-    this.respuestaCorrecta = respuestaCorrectaPregunta5 === 'true';
+    const respuestaCorrectaZona1Pregunta5 = localStorage.getItem('respuestaCorrectaZona1Pregunta5');
+    this.respuestaCorrecta = respuestaCorrectaZona1Pregunta5 === 'true';
     this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
   }
   

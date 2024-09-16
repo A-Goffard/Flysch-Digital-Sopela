@@ -9,26 +9,26 @@
         <h5>¿Cómo podría llamarse una bruja que estubiera jugando con las criaturas del pasado?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="Sorgiña Piruliña" [disabled]="respuestaCorrectaZ2"
+                <input type="radio" id="opcion1" name="pregunta1" value="Sorgiña Piruliña" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Sorgiña Piruliña', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Sorgiña Piruliña' && comprobarPressedZ2}">Sorgiña Piruliña</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Sorgiña Piruliña', 'incorrecta': respuestaIncorrecta && seleccion === 'Sorgiña Piruliña' && comprobarPressed}">Sorgiña Piruliña</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="Arqueo Sorgiña" [disabled]="respuestaCorrectaZ2"
+                <input type="radio" id="opcion3" name="pregunta1" value="Arqueo Sorgiña" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Arqueo Sorgiña', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Arqueo Sorgiña' && comprobarPressedZ2}">Arqueo Sorgiña</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Arqueo Sorgiña', 'incorrecta': respuestaIncorrecta && seleccion === 'Arqueo Sorgiña' && comprobarPressed}">Arqueo Sorgiña</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="Paleo Sorgiña" [disabled]="respuestaCorrectaZ2"
+                <input type="radio" id="opcion2" name="pregunta1" value="Paleo Sorgiña" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Paleo Sorgiña', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Paleo Sorgiña' && comprobarPressedZ2}">Paleo Sorgiña</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Paleo Sorgiña', 'incorrecta': respuestaIncorrecta && seleccion === 'Paleo Sorgiña' && comprobarPressed}">Paleo Sorgiña</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ2">Comprobar</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
     <!--     <button (click)="goToZona2()" class="btnA">Zona 2</button>
-    -->    <button *ngIf="respuestaCorrectaZ2" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+    -->    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
 </div>

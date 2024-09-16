@@ -28,7 +28,7 @@ export class Pregunta3Component implements OnInit {
       this.respuestasCorrectas['/zona1/pregunta3'] = true;
   
       // Almacenar estado específico de la pregunta 2
-      localStorage.setItem('respuestaCorrectaPregunta3', 'true');
+      localStorage.setItem('respuestaCorrectaZona1Pregunta3', 'true');
   
       setTimeout(() => {
         this.router.navigate(['/zona1/pregunta3/explicacion3']);
@@ -39,7 +39,7 @@ export class Pregunta3Component implements OnInit {
       this.respuestasCorrectas['/zona1/pregunta3'] = false;
   
       // Almacenar estado específico de la pregunta 2
-      localStorage.setItem('respuestaCorrectaPregunta3', 'false');
+      localStorage.setItem('respuestaCorrectaZona1Pregunta3', 'false');
   
       if (this.seleccion === '54 Ma') {
         setTimeout(() => {
@@ -76,8 +76,8 @@ export class Pregunta3Component implements OnInit {
     }
   
     // Recuperar el estado específico de la pregunta 2
-    const respuestaCorrectaPregunta3 = localStorage.getItem('respuestaCorrectaPregunta3');
-    this.respuestaCorrecta = respuestaCorrectaPregunta3 === 'true';
+    const respuestaCorrectaZona1Pregunta3 = localStorage.getItem('respuestaCorrectaZona1Pregunta3');
+    this.respuestaCorrecta = respuestaCorrectaZona1Pregunta3 === 'true';
     this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
   }
   

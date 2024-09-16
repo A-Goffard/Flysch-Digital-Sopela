@@ -13,36 +13,36 @@ import { BackComponentComponent } from "../../../../shared/back-component/back-c
 })
 export class Pregunta1Component implements OnInit {
   mostrarLupa = false;
-  respuestaCorrectaZ4 = false;
-  respuestaIncorrectaZ4 = false;
-  respuestasCorrectasZ4: { [key: string]: boolean } = {};
-  seleccionZ4: string = '';
-  comprobarPressedZ4 = false;
+  respuestaCorrecta = false;
+  respuestaIncorrecta = false;
+  respuestasCorrectas: { [key: string]: boolean } = {};
+  seleccion: string = '';
+  comprobarPressed = false;
 
   constructor(private router: Router) {}
   comprobar() {
-    this.comprobarPressedZ4 = true;
+    this.comprobarPressed = true;
   
-    if (this.seleccionZ4 === 'Tres') {
-      this.respuestaCorrectaZ4 = true;
-      this.respuestaIncorrectaZ4 = false;
-      this.respuestasCorrectasZ4['/zona4/pregunta1'] = true;
+    if (this.seleccion === 'Tres') {
+      this.respuestaCorrecta = true;
+      this.respuestaIncorrecta = false;
+      this.respuestasCorrectas['/zona4/pregunta1'] = true;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaZ4Pregunta1', 'true');
+      localStorage.setItem('respuestaCorrectaZona4Pregunta1', 'true');
   
       setTimeout(() => {
         this.router.navigate(['/zona4/pregunta1/explicacion1']);
       }, 2000);
     } else {
-      this.respuestaCorrectaZ4 = false;
-      this.respuestaIncorrectaZ4 = true;
-      this.respuestasCorrectasZ4['/zona4/pregunta1'] = false;
+      this.respuestaCorrecta = false;
+      this.respuestaIncorrecta = true;
+      this.respuestasCorrectas['/zona4/pregunta1'] = false;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaZ4Pregunta1', 'false');
+      localStorage.setItem('respuestaCorrectaZona4Pregunta1', 'false');
   
-      if (this.seleccionZ4 === 'Dos') {
+      if (this.seleccion === 'Dos') {
         setTimeout(() => {
           this.router.navigate(['/zona4/pregunta1/pista1']);
         }, 2000);
@@ -53,8 +53,8 @@ export class Pregunta1Component implements OnInit {
       }
     }
   
-    localStorage.setItem('respuestasCorrectasZ4', JSON.stringify(this.respuestasCorrectasZ4));
-    localStorage.setItem('seleccionZ4Pregunta1', this.seleccionZ4);
+    localStorage.setItem('respuestasCorrectas', JSON.stringify(this.respuestasCorrectas));
+    localStorage.setItem('seleccionPregunta1', this.seleccion);
   }
   
 
@@ -67,28 +67,28 @@ export class Pregunta1Component implements OnInit {
   }
   
   ngOnInit() {
-    const respuestasGuardadasZ4 = localStorage.getItem('respuestasCorrectasZ4');
-    if (respuestasGuardadasZ4) {
-      this.respuestasCorrectasZ4 = JSON.parse(respuestasGuardadasZ4);
+    const respuestasGuardadas = localStorage.getItem('respuestasCorrectas');
+    if (respuestasGuardadas) {
+      this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
     }
   
-    const seleccionZ4GuardadaZ4 = localStorage.getItem('seleccionZ4Pregunta1');
-    if (seleccionZ4GuardadaZ4) {
-      this.seleccionZ4 = seleccionZ4GuardadaZ4;
+    const seleccionGuardada = localStorage.getItem('seleccionPregunta1');
+    if (seleccionGuardada) {
+      this.seleccion = seleccionGuardada;
     }
   
     // Recuperar el estado específico de la pregunta 1
-    const respuestaCorrectaZ4Pregunta1 = localStorage.getItem('respuestaCorrectaZ4Pregunta1');
-    this.respuestaCorrectaZ4 = respuestaCorrectaZ4Pregunta1 === 'true';
-    this.respuestaIncorrectaZ4 = !this.respuestaCorrectaZ4 && !!this.seleccionZ4;
+    const respuestaCorrectaZona4Pregunta1 = localStorage.getItem('respuestaCorrectaZona4Pregunta1');
+    this.respuestaCorrecta = respuestaCorrectaZona4Pregunta1 === 'true';
+    this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
   }
   
 
   onOptionChange(event: Event) {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement) {
-      this.seleccionZ4 = inputElement.value;
-      this.comprobarPressedZ4 = false;
+      this.seleccion = inputElement.value;
+      this.comprobarPressed = false;
     }
   }
 }

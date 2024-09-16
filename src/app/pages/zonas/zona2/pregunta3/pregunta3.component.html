@@ -8,26 +8,26 @@
         <h5>¿Qué montes se formaron al mismo tiempo que estos pliegues?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="Los Urales" [disabled]="respuestaCorrectaZ2"
+                <input type="radio" id="opcion1" name="pregunta1" value="Los Urales" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Los Urales', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Los Urales' && comprobarPressedZ2}">Los Urales</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Los Urales', 'incorrecta': respuestaIncorrecta && seleccion === 'Los Urales' && comprobarPressed}">Los Urales</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="Los Andes" [disabled]="respuestaCorrectaZ2"
+                <input type="radio" id="opcion3" name="pregunta1" value="Los Andes" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Los ´', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Los Andes' && comprobarPressedZ2}">Los Andes</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Los ´', 'incorrecta': respuestaIncorrecta && seleccion === 'Los Andes' && comprobarPressed}">Los Andes</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="Los Cárpatos" [disabled]="respuestaCorrectaZ2"
+                <input type="radio" id="opcion2" name="pregunta1" value="Los Cárpatos" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ2 && seleccionZ2 === 'Los Cárpatos', 'incorrecta': respuestaIncorrectaZ2 && seleccionZ2 === 'Los Cárpatos' && comprobarPressedZ2}">Los Cárpatos</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Los Cárpatos', 'incorrecta': respuestaIncorrecta && seleccion === 'Los Cárpatos' && comprobarPressed}">Los Cárpatos</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ2">Comprobar</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
     <!--     <button (click)="goToZona2()" class="btnA">Zona 2</button>
-    -->    <button *ngIf="respuestaCorrectaZ2" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+    -->    <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
 </div>

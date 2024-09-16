@@ -1,30 +1,30 @@
 <div id="cont" class="centre container index animate__animated animate__fadeIn">
     <div class="margen">
         <h4>Última pregunta</h4>
-        <p>Todo este hierro puede haberPaleo Sorgiña a realizar la aleación necesaria con el Iridio para atrapar la energía del meteorito.</p>
+        <p>Todo este hierro puede haber ayudado a la Paleo Sorgiña a realizar la aleación necesaria con el Iridio para atrapar la energía del meteorito.</p>
         <p>Pero además, tiene una vinculación con la historia más reciente. Especialmente con el equipo de fútbol Athletic Club.</p>
         <h5>¿Cual es la palabra clave de esa vinculación?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="Bacalau" [disabled]="respuestaCorrectaZ5"
+                <input type="radio" id="opcion1" name="pregunta1" value="Bacalau" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Bacalau', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Bacalau' && comprobarPressedZ5}">Bacalau</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Bacalau', 'incorrecta': respuestaIncorrecta && seleccion === 'Bacalau' && comprobarPressed}">Bacalau</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="Campeón" [disabled]="respuestaCorrectaZ5"
+                <input type="radio" id="opcion3" name="pregunta1" value="Campeón" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Campeón', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Campeón' && comprobarPressedZ5}">Campeón</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Campeón', 'incorrecta': respuestaIncorrecta && seleccion === 'Campeón' && comprobarPressed}">Campeón</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="Alirón" [disabled]="respuestaCorrectaZ5"
+                <input type="radio" id="opcion2" name="pregunta1" value="Alirón" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ5 && seleccionZ5 === 'Alirón', 'incorrecta': respuestaIncorrectaZ5 && seleccionZ5 === 'Alirón' && comprobarPressedZ5}">Alirón</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Alirón', 'incorrecta': respuestaIncorrecta && seleccion === 'Alirón' && comprobarPressed}">Alirón</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ5">Comprobar</button>
-        <button *ngIf="respuestaCorrectaZ5" (click)="goToExplicacion()" class="btnA">Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA">Explicación</button>
     </div>
 </div>

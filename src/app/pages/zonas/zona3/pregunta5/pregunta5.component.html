@@ -5,26 +5,26 @@
         <h5>¿Cuántas especies diferentes podríamos llegar a encontrar?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="Dos" [disabled]="respuestaCorrectaZ3"
+                <input type="radio" id="opcion1" name="pregunta1" value="Dos" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Dos', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Dos' && comprobarPressedZ3}">Dos</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Dos', 'incorrecta': respuestaIncorrecta && seleccion === 'Dos' && comprobarPressed}">2</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="Entre dos y Cinco" [disabled]="respuestaCorrectaZ3"
+                <input type="radio" id="opcion3" name="pregunta1" value="Entre dos y Cinco" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Entre dos y Cinco', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Entre dos y Cinco' && comprobarPressedZ3}">Entre dos y Cinco</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Entre dos y Cinco', 'incorrecta': respuestaIncorrecta && seleccion === 'Entre dos y Cinco' && comprobarPressed}">Entre 2 y 5</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="Más de cinco" [disabled]="respuestaCorrectaZ3"
+                <input type="radio" id="opcion2" name="pregunta1" value="Más de cinco" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Más de cinco', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Más de cinco' && comprobarPressedZ3}">Más de cinco</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Más de cinco', 'incorrecta': respuestaIncorrecta && seleccion === 'Más de cinco' && comprobarPressed}">Más de 5</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ3">Comprobar</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
         <button (click)="goToZona3()" class="btnA">Zona 3</button>
-        <button *ngIf="respuestaCorrectaZ3" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
 </div>

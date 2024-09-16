@@ -13,36 +13,36 @@ import { BackComponentComponent } from "../../../../shared/back-component/back-c
 })
 export class Pregunta3Component implements OnInit {
   mostrarLupa = false;
-  respuestaCorrectaZ3 = false;
-  respuestaIncorrectaZ3 = false;
-  respuestasCorrectasZ3: { [key: string]: boolean } = {};
-  seleccionZ3: string = '';
-  comprobarPressedZ3 = false;
+  respuestaCorrecta = false;
+  respuestaIncorrecta = false;
+  respuestasCorrectas: { [key: string]: boolean } = {};
+  seleccion: string = '';
+  comprobarPressed = false;
 
   constructor(private router: Router) {}
   comprobar() {
-    this.comprobarPressedZ3 = true;
+    this.comprobarPressed = true;
   
-    if (this.seleccionZ3 === 'Mosasaurus') {
-      this.respuestaCorrectaZ3 = true;
-      this.respuestaIncorrectaZ3 = false;
-      this.respuestasCorrectasZ3['/zona3/pregunta3'] = true;
+    if (this.seleccion === 'Mosasaurus') {
+      this.respuestaCorrecta = true;
+      this.respuestaIncorrecta = false;
+      this.respuestasCorrectas['/zona3/pregunta3'] = true;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaZ3Pregunta3', 'true');
+      localStorage.setItem('respuestaCorrectaZona3Pregunta3', 'true');
   
       setTimeout(() => {
         this.router.navigate(['/zona3/pregunta3/explicacion3']);
       }, 2000);
     } else {
-      this.respuestaCorrectaZ3 = false;
-      this.respuestaIncorrectaZ3 = true;
-      this.respuestasCorrectasZ3['/zona3/pregunta3'] = false;
+      this.respuestaCorrecta = false;
+      this.respuestaIncorrecta = true;
+      this.respuestasCorrectas['/zona3/pregunta3'] = false;
   
       // Almacenar estado específico de la pregunta 1
-      localStorage.setItem('respuestaCorrectaZ3Pregunta3', 'false');
+      localStorage.setItem('respuestaCorrectaZona3Pregunta3', 'false');
   
-      if (this.seleccionZ3 === 'Trilobita') {
+      if (this.seleccion === 'Trilobita') {
         setTimeout(() => {
           this.router.navigate(['/zona3/pregunta3/pista1']);
         }, 2000);
@@ -53,8 +53,8 @@ export class Pregunta3Component implements OnInit {
       }
     }
   
-    localStorage.setItem('respuestasCorrectasZ3', JSON.stringify(this.respuestasCorrectasZ3));
-    localStorage.setItem('seleccionZ3Pregunta3', this.seleccionZ3);
+    localStorage.setItem('respuestasCorrectas', JSON.stringify(this.respuestasCorrectas));
+    localStorage.setItem('seleccionPregunta3', this.seleccion);
   }
   
 
@@ -67,28 +67,28 @@ export class Pregunta3Component implements OnInit {
   }
 
   ngOnInit() {
-    const respuestasGuardadasZ3 = localStorage.getItem('respuestasCorrectasZ3');
-    if (respuestasGuardadasZ3) {
-      this.respuestasCorrectasZ3 = JSON.parse(respuestasGuardadasZ3);
+    const respuestasGuardadas = localStorage.getItem('respuestasCorrectas');
+    if (respuestasGuardadas) {
+      this.respuestasCorrectas = JSON.parse(respuestasGuardadas);
     }
   
-    const seleccionZ3GuardadaZ3 = localStorage.getItem('seleccionZ3Pregunta3');
-    if (seleccionZ3GuardadaZ3) {
-      this.seleccionZ3 = seleccionZ3GuardadaZ3;
+    const seleccionGuardada = localStorage.getItem('seleccionPregunta3');
+    if (seleccionGuardada) {
+      this.seleccion = seleccionGuardada;
     }
   
     // Recuperar el estado específico de la pregunta 1
-    const respuestaCorrectaZ3Pregunta3 = localStorage.getItem('respuestaCorrectaZ3Pregunta3');
-    this.respuestaCorrectaZ3 = respuestaCorrectaZ3Pregunta3 === 'true';
-    this.respuestaIncorrectaZ3 = !this.respuestaCorrectaZ3 && !!this.seleccionZ3;
+    const respuestaCorrectaZona3Pregunta3 = localStorage.getItem('respuestaCorrectaZona3Pregunta3');
+    this.respuestaCorrecta = respuestaCorrectaZona3Pregunta3 === 'true';
+    this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
   }
   
 
   onOptionChange(event: Event) {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement) {
-      this.seleccionZ3 = inputElement.value;
-      this.comprobarPressedZ3 = false;
+      this.seleccion = inputElement.value;
+      this.comprobarPressed = false;
     }
   }
 }

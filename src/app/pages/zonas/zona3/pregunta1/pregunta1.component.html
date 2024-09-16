@@ -5,31 +5,31 @@
         <h5>¿Cuál de estos fósiles es un ammonite?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="Ammonite" [disabled]="respuestaCorrectaZ3"
+                <input type="radio" id="opcion1" name="pregunta1" value="Ammonite" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Ammonite', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Ammonite' && comprobarPressedZ3}">
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Ammonite', 'incorrecta': respuestaIncorrecta && seleccion === 'Ammonite' && comprobarPressed}">
                     <img src="images/fosiles/18.png" alt="Ammonite" width="100" height="100">
                 </label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="Innocerámido" [disabled]="respuestaCorrectaZ3"
+                <input type="radio" id="opcion3" name="pregunta1" value="Innocerámido" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Innocerámido', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Innocerámido' && comprobarPressedZ3}">
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Innocerámido', 'incorrecta': respuestaIncorrecta && seleccion === 'Innocerámido' && comprobarPressed}">
                     <img src="images/fosiles/15.png" alt="Innocerámido" width="100" height="100">
                 </label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="Coprolito" [disabled]="respuestaCorrectaZ3"
+                <input type="radio" id="opcion2" name="pregunta1" value="Coprolito" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ3 && seleccionZ3 === 'Coprolito', 'incorrecta': respuestaIncorrectaZ3 && seleccionZ3 === 'Coprolito' && comprobarPressedZ3}">
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Coprolito', 'incorrecta': respuestaIncorrecta && seleccion === 'Coprolito' && comprobarPressed}">
                     <img src="images/fosiles/30.png" alt="Coprolito" width="100" height="100">
                 </label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ3">Comprobar</button>
-        <button *ngIf="respuestaCorrectaZ3" (click)="goToExplicacion()" class="btnA">Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA">Explicación</button>
     </div>
 </div>

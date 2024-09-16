@@ -14,6 +14,6 @@ export class Explicacion2Component {
   constructor(private router: Router) {}
 
   volver() {
-    this.router.navigate(['/zona5/pregunta23']);
+    this.router.navigate(['/zona5']);
   }
 }

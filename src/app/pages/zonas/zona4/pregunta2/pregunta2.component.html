@@ -5,25 +5,25 @@
         <h5>¿Cuantos millones de años tiene ese estrato?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="66 Ma" [disabled]="respuestaCorrectaZ4"
+                <input type="radio" id="opcion1" name="pregunta1" value="66 Ma" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === '66 Ma', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === '66 Ma' && comprobarPressedZ4}">66 Millones de años</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === '66 Ma', 'incorrecta': respuestaIncorrecta && seleccion === '66 Ma' && comprobarPressed}">66 Millones de años</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="47,5 Ma" [disabled]="respuestaCorrectaZ4"
+                <input type="radio" id="opcion3" name="pregunta1" value="47,5 Ma" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === '47,5 Ma', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === '47,5 Ma' && comprobarPressedZ4}">47,5 Millones de años</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === '47,5 Ma', 'incorrecta': respuestaIncorrecta && seleccion === '47,5 Ma' && comprobarPressed}">47,5 Millones de años</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="68 Ma" [disabled]="respuestaCorrectaZ4"
+                <input type="radio" id="opcion2" name="pregunta1" value="68 Ma" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === '68 Ma', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === '68 Ma' && comprobarPressedZ4}">68 Millones de años</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === '68 Ma', 'incorrecta': respuestaIncorrecta && seleccion === '68 Ma' && comprobarPressed}">68 Millones de años</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ4">Comprobar</button>
-        <button *ngIf="respuestaCorrectaZ4" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
 </div>

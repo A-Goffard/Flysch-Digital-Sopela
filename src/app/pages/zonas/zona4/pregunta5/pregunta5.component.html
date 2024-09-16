@@ -6,26 +6,25 @@
         <h5>¿Qué elemento poco común en la Tierra se asocia con los meteoritos?</h5>
         <div class="respuestas">
             <div class="opcion">
-                <input type="radio" id="opcion1" name="pregunta1" value="Astato" [disabled]="respuestaCorrectaZ4"
+                <input type="radio" id="opcion1" name="pregunta1" value="Astato" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === 'Astato', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === 'Astato' && comprobarPressedZ4}">Astato</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Astato', 'incorrecta': respuestaIncorrecta && seleccion === 'Astato' && comprobarPressed}">Astato</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion3" name="pregunta1" value="Wolframio" [disabled]="respuestaCorrectaZ4"
+                <input type="radio" id="opcion3" name="pregunta1" value="Wolframio" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === 'Wolframio', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === 'Wolframio' && comprobarPressedZ4}">Wolframio</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Wolframio', 'incorrecta': respuestaIncorrecta && seleccion === 'Wolframio' && comprobarPressed}">Wolframio</label>
             </div>
             <div class="opcion">
-                <input type="radio" id="opcion2" name="pregunta1" value="Iridio" [disabled]="respuestaCorrectaZ4"
+                <input type="radio" id="opcion2" name="pregunta1" value="Iridio" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrectaZ4 && seleccionZ4 === 'Iridio', 'incorrecta': respuestaIncorrectaZ4 && seleccionZ4 === 'Iridio' && comprobarPressedZ4}">Iridio</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Iridio', 'incorrecta': respuestaIncorrecta && seleccion === 'Iridio' && comprobarPressed}">Iridio</label>
             </div>
         </div>
-        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrectaZ4">Comprobar</button>
-        <button (click)="goToZona4()" class="btnA">Zona 4</button>
-        <button *ngIf="respuestaCorrectaZ4" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
 </div>

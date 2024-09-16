@@ -12,7 +12,7 @@ export class MasInfoComponent {
   constructor(private router: Router) {}
 
   volver() {
-    this.router.navigate(['/zona1']);
+    this.router.navigate(['/zonas']);
   }
 
 }
