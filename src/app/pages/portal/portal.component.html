@@ -1,1 +1,25 @@
-<p>portal works!</p>
+<div id="cont" class="centre container index animate__animated animate__fadeIn">
+    <div *ngIf="!puzzleComplete">
+        <div class="margen index animate__animated animate__fadeIn">
+            <h1>¡Cierra el portal!</h1>
+            <p>Pulsa los símbolos en el orden correcto.</p>
+            <div class="button-grid">
+                <button class="btn-simbolos" *ngFor="let button of shuffledButtons; let i = index"
+                    (click)="checkOrder(i)" [disabled]="button.disabled" [ngClass]="{'selected': button.selected}">
+                    <img [src]="button.image" [alt]="button.name" class="button-image" />
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="puzzleComplete" class="success-message">
+        <div class="margen index animate__animated animate__fadeIn">
+            <img src="images/simbolos/Simbologeobizi.png" alt="Portal Imagen" class="portal-image">
+            <h2>¡Has cerrado el portal!</h2>
+            <h2>¡Felicidades!</h2>
+            <p>Has salvado al mundo del desastre que se estaba gestando.</p>
+            <h4 class="margen">Ve a recoger tu premio. Busca a alguien con la camiseta negra Geobizi o la gorra verde de
+                Geotxiki.</h4>
+        </div>
+    </div>
+</div>

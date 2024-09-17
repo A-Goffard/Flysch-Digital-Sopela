@@ -1,0 +1,45 @@
+.portal-image {
+    max-width: 15rem;
+}
+
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-simbolos {
+    font-size: 1.5rem;
+    margin: 1rem;
+    border-radius: 0.7rem;
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease; /* Animación suave para los botones */
+}
+
+/* Botón seleccionado con un borde negro */
+.selected {
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgba(87, 87, 87, 0.66);
+    border-radius: 50%;
+}
+
+/* Animación de fade-in */
+.animate__animated.animate__fadeIn {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.button-image{
+    width: 10rem;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.66));
+}
