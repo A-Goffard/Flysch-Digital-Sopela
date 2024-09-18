@@ -62,7 +62,7 @@ export class Pregunta1Component implements OnInit {
   }
   
   goToExplicacion() {
-    this.router.navigate(['/zona2/pregunta1/explicacion1']);
+    this.router.navigate(['/zona3/pregunta1/explicacion1']);
   }
   
   ngOnInit() {
@@ -77,7 +77,7 @@ export class Pregunta1Component implements OnInit {
     }
   
     // Recuperar el estado específico de la pregunta 1
-    const respuestaCorrectaZona3Pregunta1 = localStorage.getItem('respuestaCorrectaPregunta1');
+    const respuestaCorrectaZona3Pregunta1 = localStorage.getItem('respuestaCorrectaZona3Pregunta1');
     this.respuestaCorrecta = respuestaCorrectaZona3Pregunta1 === 'true';
     this.respuestaIncorrecta = !this.respuestaCorrecta && !!this.seleccion;
   }
