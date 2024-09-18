@@ -10,10 +10,8 @@
 
 .btn-simbolos {
     font-size: 1.5rem;
-    margin: 1rem;
-    border-radius: 0.7rem;
+    margin: 0.5rem;
     background-color: transparent;
-    color: var(--white);
     cursor: pointer;
     border: none;
     transition: all 0.3s ease; /* Animación suave para los botones */
@@ -40,6 +38,6 @@
     }
 }
 .button-image{
-    width: 10rem;
+    width: 7rem;
     filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.66));
 }
