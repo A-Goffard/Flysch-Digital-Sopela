@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.css'
 })
+
+
 export class IntroComponent implements OnInit {
 
   constructor(private router: Router) {}
@@ -21,6 +23,10 @@ export class IntroComponent implements OnInit {
         cont.classList.add('animate__fadeOut');
       }
 
+      // Redirigir a 'home' después de que la animación fadeOut termine
+      setTimeout(() => {
+        this.router.navigate(['/home']);
+      }, 4000); // 4 segundos, la duración de la animación fadeOut
     }, 5000); 
   }
 }

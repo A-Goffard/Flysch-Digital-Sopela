@@ -26,10 +26,5 @@ export class AppComponent implements OnInit {
     ).subscribe(() => {
       window.scrollTo(0, 0); // Desplazarse a la parte superior
     });
-
-    // Esperar a que las animaciones terminen antes de redirigir
-    setTimeout(() => {
-      this.router.navigate(['/home']); // Ajusta la ruta según sea necesario
-    }, 7000); // Ajusta el tiempo según la duración de la animación fadeOut
   }
 }
