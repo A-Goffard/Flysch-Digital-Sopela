@@ -25,6 +25,12 @@ export class ContextComponent {
     });
   }
 
+  goToZonas() {
+    this.salida(() => {
+      this.router.navigate(['/zonas']);
+    });
+  }
+
   goToInstructions() {
     this.salida(() => {
       this.router.navigate(['/instructions']);

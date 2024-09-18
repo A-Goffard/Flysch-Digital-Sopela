@@ -5,6 +5,7 @@ import { ContextComponent } from './pages/context/context.component';
 import { InstructionsComponent } from './pages/instructions/instructions.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ZonasComponent } from './pages/zonas/zonas.component';
+import { ExtraComponent } from './pages/extra/extra.component';
 import { PortalComponent } from './pages/portal/portal.component';
 //Misiones
 import { Pistas1Component } from './pages/misiones/mision1/pistas/pistas.component';
@@ -180,6 +181,7 @@ export const routes: Routes = [
   { path: 'context', component: ContextComponent },
   { path: 'instructions', component: InstructionsComponent },
   { path: 'contact', component: ContactoComponent },
+  { path: 'extra', component: ExtraComponent },
   { path: 'portal', component: PortalComponent },
   { path: 'pista1', component: Pistas1Component },
   { path: 'pista2', component: Pistas2Component },

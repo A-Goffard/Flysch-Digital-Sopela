@@ -33,7 +33,7 @@ export class Pregunta3Component implements OnInit {
   
       setTimeout(() => {
         this.router.navigate(['/zona3/pregunta3/explicacion3']);
-      }, 2000);
+      }, 1000);
     } else {
       this.respuestaCorrecta = false;
       this.respuestaIncorrecta = true;
@@ -45,11 +45,11 @@ export class Pregunta3Component implements OnInit {
       if (this.seleccion === 'Trilobita') {
         setTimeout(() => {
           this.router.navigate(['/zona3/pregunta3/pista1']);
-        }, 2000);
+        }, 1000);
       } else {
         setTimeout(() => {
           this.router.navigate(['/zona3/pregunta3/pista2']);
-        }, 2000);
+        }, 1000);
       }
     }
   

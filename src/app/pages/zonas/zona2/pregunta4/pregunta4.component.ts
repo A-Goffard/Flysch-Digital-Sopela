@@ -32,7 +32,7 @@ export class Pregunta4Component implements OnInit {
   
       setTimeout(() => {
         this.router.navigate(['/zona2/pregunta4/explicacion4']);
-      }, 2000);
+      }, 1000);
     } else {
       this.respuestaCorrecta = false;
       this.respuestaIncorrecta = true;
@@ -44,11 +44,11 @@ export class Pregunta4Component implements OnInit {
       if (this.seleccion === 'Merlín') {
         setTimeout(() => {
           this.router.navigate(['/zona2/pregunta4/pista1']);
-        }, 2000);
+        }, 1000);
       } else {
         setTimeout(() => {
           this.router.navigate(['/zona2/pregunta4/pista2']);
-        }, 2000);
+        }, 1000);
       }
     }
   

@@ -32,7 +32,7 @@ export class Pregunta2Component implements OnInit {
   
       setTimeout(() => {
         this.router.navigate(['/zona2/pregunta2/explicacion2']);
-      }, 2000);
+      }, 1000);
     } else {
       this.respuestaCorrecta = false;
       this.respuestaIncorrecta = true;
@@ -44,11 +44,11 @@ export class Pregunta2Component implements OnInit {
       if (this.seleccion === 'Los pliegues') {
         setTimeout(() => {
           this.router.navigate(['/zona2/pregunta2/pista1']);
-        }, 2000);
+        }, 1000);
       } else {
         setTimeout(() => {
           this.router.navigate(['/zona2/pregunta2/pista2']);
-        }, 2000);
+        }, 1000);
       }
     }
   
