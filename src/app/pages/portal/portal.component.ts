@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router'; // Importa Router
 
 @Component({
   selector: 'app-portal',
@@ -30,7 +31,7 @@ export class PortalComponent implements OnDestroy {
 
   shuffledButtons = this.shuffleArray([...this.buttons]); // Barajar los botones al cargar
 
-  constructor() {
+  constructor(private router: Router) { // Inyecta Router en el constructor
     // Configuración del audio en bucle
     this.portalSound.loop = true;
   }
@@ -98,5 +99,10 @@ export class PortalComponent implements OnDestroy {
     this.portalSound.pause(); // Detener la música de fondo
     this.portalSound.currentTime = 0; // Reiniciar el tiempo del audio opcionalmente
     this.successSound.play(); // Reproducir sonido de éxito
+  }
+
+  gotoQuestion() {
+    // Navega a la página de zonas
+    this.router.navigate(['/feedback']);
   }
 }

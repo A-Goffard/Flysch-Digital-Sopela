@@ -1,0 +1,21 @@
+.input {
+    max-width: 15rem;
+    border-width: 0.3rem;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    color: var(--linkgreen);
+    font-size: 1.5rem;
+}
+
+
+.rating {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.rating-star {
+  width: 24px; /* Ajusta el tamaño según tus necesidades */
+  height: 24px;
+  margin-right: 4px; /* Espaciado entre estrellas */
+}
