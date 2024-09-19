@@ -41,3 +41,61 @@
     width: 7rem;
     filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.66));
 }
+/* Asegura que el contenedor de las imágenes esté centrado en la pantalla */
+
+
+/* Configuración de las imágenes */
+.portal-image {
+    max-width: 15rem;
+    opacity: 0;
+}
+
+.img-centro {
+    z-index: 1;
+    animation: fadeInRotate 2s ease-in-out forwards; 
+}
+
+.img-borde {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    animation: fadeInOpacity 0.7s ease-in-out forwards; 
+}
+
+/* Animación combinada de rotación y opacidad */
+@keyframes fadeInRotate {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOpacity{
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+.divImgs {
+    /* Reducido el margen superior */
+    margin-top: 2rem; /* Ajusta según sea necesario */
+    position: relative;
+    top: 0; /* Alineado mejor al contenido */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem; 
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
