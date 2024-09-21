@@ -2,30 +2,29 @@
     <div class="margen">
         <h4>Primera pregunta</h4>
         <p>Tenemos un cartel con información sobre las rocas que hay delante.</p>
-        <p>Puede que algún dato nos sirba de ayuda.</p>
-        <h5>¿Cuál es la manera más específica para describir la montaña que tienes delante?</h5>
+        <p>Puede que algún dato nos sirva de ayuda.</p>
+        <h5>¿Cuántos colores se pueden distinguir en las rocas que tienes enfrente?</h5>
         <div class="respuestas">
             <div class="opcion">
                 <input type="radio" id="opcion1" name="pregunta1" value="Todo junto" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event)">
                 <label for="opcion1"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Todo junto', 'incorrecta': respuestaIncorrecta && seleccion === 'Todo junto' && comprobarPressed}">Todo es lo mismo</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Todo junto', 'incorrecta': respuestaIncorrecta && seleccion === 'Todo junto' && comprobarPressed}">Uno</label>
             </div>
             <div class="opcion">
                 <input type="radio" id="opcion3" name="pregunta1" value="Dos" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion3"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Dos', 'incorrecta': respuestaIncorrecta && seleccion === 'Dos' && comprobarPressed}">Dos partes</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Dos', 'incorrecta': respuestaIncorrecta && seleccion === 'Dos' && comprobarPressed}">Dos</label>
             </div>
             <div class="opcion">
                 <input type="radio" id="opcion2" name="pregunta1" value="Tres" [disabled]="respuestaCorrecta"
                     (change)="onOptionChange($event);">
                 <label for="opcion2"
-                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Tres', 'incorrecta': respuestaIncorrecta && seleccion === 'Tres' && comprobarPressed}">Dos partes y un estrato amarillento en medio</label>
+                    [ngClass]="{'correcta': respuestaCorrecta && seleccion === 'Tres', 'incorrecta': respuestaIncorrecta && seleccion === 'Tres' && comprobarPressed}">Más de dos</label>
             </div>
         </div>
         <button (click)="comprobar()" class="btnA" [disabled]="respuestaCorrecta">Comprobar</button>
-<!--         <button (click)="goToZona4()" class="btnA">Zona 4</button>
- -->        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
+        <button *ngIf="respuestaCorrecta" (click)="goToExplicacion()" class="btnA" >Explicación</button>
     </div>
 </div>
